@@ -38,7 +38,7 @@ function getItems () {
   return data.items
 }
 // getItems()
-var items = getItems()
+var items = getItems() //to make it a global variable
 // console.log(items)
 
 // 2.) getItemsByBrand(items, brand)
@@ -54,13 +54,13 @@ function getItemsByBrand (items, searchBrand) {
   for (var k = 0; k < items.length; k++) {
     var brand = items[k].product.brand
     if (searchBrand === brand) {
-      arrBrand.push(items[k])
+      arrBrand.push(items[k].product.title)
     }
   }
   // console.log(arrBrand)
   return arrBrand
 }
-// getItemsByBrand(items, 'Sony')
+getItemsByBrand(items, 'Sony')
 
 // 3.) getItemsByAuthor(items, author)
 //
@@ -76,10 +76,12 @@ function getItemsByAuthor (items, searchAuthor) {
     var author = items[x].product.author.name
     for (var y = 0; y <= searchAuthor.length; y++) {
       if (author.substring(0, y) === searchAuthor) {
-        arrAuthor.push(items[x])
+        // to extract only 'eBay' out from 'eBay - blah' to be used for comparison with searchAuthor
+        arrAuthor.push(items[x].product.title)
       }
     }
   }
-  console.log(arrAuthor)
+  // console.log(arrAuthor)
+  return arrAuthor
 }
-getItemsByAuthor(items, 'Target')
+getItemsByAuthor(items, 'eBay')
