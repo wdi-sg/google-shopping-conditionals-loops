@@ -7,7 +7,6 @@ var data = require('../products.json');
 
 var count = 0
 
-
 for (var i= 0; i< data.items.length; i++){
   var product = data.items[i].product
   if(product.inventories[0].availability === 'backorder'){
