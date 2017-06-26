@@ -1,6 +1,5 @@
 var data = require('../products.json')
 
-// Q1-5 (wanzheng)
 var itemArr = []
 
 function getItems (data) {
@@ -52,22 +51,5 @@ function getAvailableProduct (items) {
 // console.log(getItemsByAuthor(getItems(data), 'Adorama Camera'))
 
 // All items made by Nikon with the author eBay.
-// var itemsByNikon = getItemsByBrand(getItems(data), 'Nikon')
-// console.log(getItemsByAuthor(itemsByNikon, 'eBay').length)
-
-// Q6 (michelle)
-// 6.) Print all the products with their brand, price, and an image link
-
-var items = data.items    // items is an array of objects
-
-var arrayQ6 = []
-
-for (var n=0; n<items.length; n++) {
-    var itemObj = {}
-    itemObj.title = items[n].product.title
-    itemObj.brand = items[n].product.brand
-    itemObj.price = items[n].product.inventories[0].price
-    itemObj.imgLink = items[n].product.images[0].link
-    arrayQ6.push(itemObj)
-}
-console.log(arrayQ6)
+var itemsByNikon = getItemsByBrand(getItems(data), 'Nikon')
+console.log(getItemsByAuthor(itemsByNikon, 'eBay').length)
