@@ -76,65 +76,63 @@ var data = require('../products.json')
 //
 // Note all other functions (below) use the return of this function as their input.
 
-// var getItems = function() {
-//    console.log(data.items[0])
-// }
-// getItems()
+var getItems = function (objectData) {
+   return data.items
+}
+//console.log(getItems(data))
 
 // 2.) getItemsByBrand(items, brand)
 //
-// input: an array of items, a string of a brand to filter with
-// returns: an array of items (of a specific brand)
 // Create a function called getItemsByBrand that takes an item array returns a new array of all items of a specified brand.
 //
 // Test this function by searching for Sony, Canon, Nikon and Panasonic.
 
-// var arrItemsByBrand = []
-// function getItemsByBrand(items, brand) {
-//   for (var i = 0; i < data.items.length; i++) {
-//     if (data.items[i].product.brand === brand) {
-//       arrItemsByBrand.push(data.items[i].product.title)
-//     }
-//   }
-//   return arrItemsByBrand
-// }
-//
-// console.log(getItemsByBrand(data.items, "Canon"))
+
+function getItemsByBrand(items, brand) {
+  var arrItemsByBrand = []
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].product.brand === brand) {
+      arrItemsByBrand.push(items[i])
+    }
+  }
+  return arrItemsByBrand
+}
+
+//console.log(getItemsByBrand(getItems(data), "Sony"))
 
 // 3.) getItemsByAuthor(items, author)
 //
-// input: an array of items, a string of an author to filter with
-// returns: an array of items (of a specific author)
 // Create a function called getItemsByAuthor that takes an item array and returns a new array of all items by a specified author.
 //
 // Test this function by searching for Target, CDW, eBay
 
-// var arrItemsByAuthor = []
-// function getItemsByAuthor (items, author) {
-//   for (var i = 0; i < data.items.length; i++) {
-//     if (data.items[i].product.author.name === author) {
-//       arrItemsByAuthor.push(data.items[i].product.title)
-//     }
-//   }return arrItemsByAuthor
-// }
-// console.log(getItemsByAuthor(data.items, 'eBay'))
+
+function getItemsByAuthor (items, author) {
+  var arrItemsByAuthor = []
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].product.author.name === author) {
+      arrItemsByAuthor.push(items[i])
+    }
+  }return arrItemsByAuthor
+}
+//console.log(getItemsByAuthor(getItems(data), 'Dell'))
 
 // 4.) getAvailableProducts(items)
 //
-// input: an array of items
-// returns: an array of items (that are available)
 // Create function called getAvailableProducts that takes an item array and returns an array containing all of the available products (an available product is one with at least one availability of "inStock" in the inventories array)
 
-// var arrAvailableProducts = []
-// function getAvailableProducts(items) {
-//   for (var i = 0; i < data.items.length; i++) {
-//     if (data.items[i].product.inventories[0].availability === 'inStock') {
-//       arrAvailableProducts.push(data.items[i].product.title)
-//     }
-//   }
-//   return arrAvailableProducts
-// }
-// console.log(getAvailableProducts(data.items))
+
+
+function getAvailableProducts (items) {
+  var arrAvailableProducts = []
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].product.inventories[0].availability === 'inStock') {
+      arrAvailableProducts.push(items[i].product.title)
+    }
+  }
+  return arrAvailableProducts
+}
+//console.log(getAvailableProducts(getItems()))
 
 // 5.) Use your functions
 //
@@ -145,28 +143,21 @@ var data = require('../products.json')
 // All available items by the author "Adorama Camera"
 // All items made by Nikon with the author eBay.
 
-//console.log(getItemsByBrand(data.items, "Sony"))
+var sonyProducts = getItemsByBrand (getItems(data), "Sony")
+// console.log(sonyProducts)
 
-var arrItemsByBrand = []
-function getItemsByBrand(items, brand) {
-  for (var i = 0; i < data.items.length; i++) {
-    if (data.items[i].product.brand === brand) {
-      arrItemsByBrand.push(data.items[i].product.title)
-    }
-  }
-  return arrItemsByBrand
-}
+var availableSonyProducts = getAvailableProducts (sonyProducts)
+// console.log(availableSonyProducts)
 
-var arrAvailableProducts = []
-function getAvailableProducts(items) {
-  for (var i = 0; i < data.items.length; i++) {
-    if (data.items[i].product.inventories[0].availability === 'inStock') {
-      arrAvailableProducts.push(data.items[i].product.title)
-    }
-  }
-  return arrAvailableProducts
-}
+var adoramaCamera = getItemsByAuthor (getItems(data), 'Adorama Camera')
+//console.log(adoramaCamera)
 
-console.log(getAvailableProducts(getItemsByBrand(data.items, "Sony")))
+var adoramaCameraAvailable = getAvailableProducts (adoramaCamera)
+//console.log(adoramaCameraAvailable)
+//its not in stock
 
+var nikonProducts = getItemsByBrand (getItems(data), "Nikon")
+console.log(nikonProducts)
 //
+var nikonAndAuthorEbay = getItemsByAuthor (nikonProducts, 'eBay')
+// console.log(nikonAndAuthorEbay)
