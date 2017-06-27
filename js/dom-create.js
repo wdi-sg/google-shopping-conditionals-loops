@@ -11,7 +11,7 @@ button.addEventListener('click', addToCart)
 
 function addToCart () {
   var shoppingList = document.querySelectorAll('#shopping-list li')
-  if(! shoppingList.length) {
+  if (!shoppingList.length) {
     alert('shopping list is empty')
     return // need to return, so the function stops running
   }
