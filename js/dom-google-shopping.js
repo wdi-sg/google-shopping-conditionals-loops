@@ -27,10 +27,11 @@ function addToCart () {
 // ---------------------------------------------------------------------
 var items = data.items
 var inputBrand = document.querySelector('#brand')
+var filterBrand = String(inputBrand)
 var inputAuthor = document.querySelector('#author')
+var filterAuthor = String(inputAuthor)
 
 function getItemsByBrand (items, brand) {
-  var inputBrand = document.getElementById('brand')
   var brandItems = []
   for (var i = 0; i < items.length; i++) {
     if (items[i].product.brand === brand) {
@@ -40,15 +41,7 @@ function getItemsByBrand (items, brand) {
   return brandItems
 }
 
-var brandFilter = getItemsByBrand(items, 'Nikon')
-
-// document.querySelector('form.pure-form').addEventListener('submit', function (e) {
-//
-//     //prevent the normal submission of the form
-//     e.preventDefault();
-//
-    console.log(inputBrand.value);
-// });
+var filteredBrand = getItemsByBrand(items, 'Nikon')
 
 function getItemsByAuthor (items, author) {
   var authorItems = []
@@ -60,7 +53,7 @@ function getItemsByAuthor (items, author) {
   return authorItems
 }
 
-var finalFilter = getItemsByAuthor (brandFilter, 'pictureline.com')
+var finalFilter = getItemsByAuthor(filteredBrand, 'pictureline.com')
 
 
 // ---------------------------------------------------------------------
