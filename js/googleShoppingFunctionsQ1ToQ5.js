@@ -9,8 +9,8 @@ function getItems(inputData){
   return inputData.items
 }
 
-var execute = getItems(data)
-console.log(execute)
+// var execute = getItems(data)
+// console.log(execute)
 
 //functions question 2
 // input: an array of items, a string of a brand to filter with
@@ -18,11 +18,11 @@ console.log(execute)
 // Create a function called getItemsByBrand that takes an item array returns a new array of all items of a specified brand.
 //
 
-function getItemsByBrand(data, brand) {
+function getItemsByBrand(items, brand) {
   var itemsByBrand = []
-  for (var i = 0; i < data.items.length; i++) {
-    if (data.items[i].brand.includes(brand)) {
-      itemsByBrand.push(data.items[i].brand)
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].product.brand.includes(brand)) {
+      itemsByBrand.push(items[i])
     }
   }
   return itemsByBrand
@@ -31,11 +31,11 @@ function getItemsByBrand(data, brand) {
 
 // Functions Question 3
 
-function getItemsByAuthor(data, author) {
+function getItemsByAuthor(items, author) {
   var itemsByAuthor = []
-  for (var i = 0; i < data.items.length; i++) {
-    if (data.items[i].product.author.name.includes(author)) {
-      itemsByAuthor.push(data.items[i].product.title)
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].product.author.name.includes(author)) {
+      itemsByAuthor.push(items[i])
     }
   }
   return itemsByAuthor
@@ -43,11 +43,11 @@ function getItemsByAuthor(data, author) {
 
 // Functions Question 4
 
-function getAvailableProducts(data) {
+function getAvailableProducts(items) {
   var availableProducts = []
-  for (var i = 0; i < data.items.length; i++) {
-    if (data.items[i].product.inventories[0].availability === "inStock") {
-    availableProducts.push(data.items[i].product.title)
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].product.inventories[0].availability === "inStock") {
+    availableProducts.push(items[i])
     }
   }
   return availableProducts
@@ -60,7 +60,7 @@ function getAvailableProducts(data) {
 // All items made by Sony that are available.
 // All available items by the author "Adorama Camera"
 // All items made by Nikon with the author eBay.
-getItemsByBrand(data, 'Sony')
-getAvailableProducts(getItemsByBrand(data, 'Sony'))
-getAvailableProducts(getItemsByAuthor(data, 'Adorama Camera'))
-getItemsByBrand(getItemsByAuthor(data, 'eBay'), 'Nikon')
+console.log(getItemsByBrand(getItems(data), 'Sony'))
+console.log(getAvailableProducts(getItemsByBrand(getItems(data), 'Sony')))
+console.log(getAvailableProducts(getItemsByAuthor(getItems(data), 'Adorama Camera')))
+console.log(getItemsByBrand(getItemsByAuthor(getItems(data), 'eBay'), 'Nikon'))
