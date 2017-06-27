@@ -42,16 +42,12 @@ function getItemsByBrand (items, brand) {
 
 var brandFilter = getItemsByBrand(items, 'Nikon')
 
-// console.log(filter)
-//
-// console.log(inputBrand.value)
-//
 // document.querySelector('form.pure-form').addEventListener('submit', function (e) {
 //
 //     //prevent the normal submission of the form
 //     e.preventDefault();
 //
-//     console.log(inputBrand.value);
+    console.log(inputBrand.value);
 // });
 
 function getItemsByAuthor (items, author) {
