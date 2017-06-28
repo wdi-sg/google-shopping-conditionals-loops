@@ -31,7 +31,7 @@ function getItemsByBrand(items, brand) {
 
 // Functions Question 3
 
-function getItemsByAuthor(items, author) {
+function getItemsByAuthor (items, author) {
   var itemsByAuthor = []
   for (var i = 0; i < items.length; i++) {
     if (items[i].product.author.name.includes(author)) {
@@ -47,7 +47,7 @@ function getAvailableProducts(items) {
   var availableProducts = []
   for (var i = 0; i < items.length; i++) {
     if (items[i].product.inventories[0].availability === "inStock") {
-    availableProducts.push(items[i])
+      availableProducts.push(items[i])
     }
   }
   return availableProducts
@@ -60,7 +60,7 @@ function getAvailableProducts(items) {
 // All items made by Sony that are available.
 // All available items by the author "Adorama Camera"
 // All items made by Nikon with the author eBay.
-console.log(getItemsByBrand(getItems(data), 'Sony'))
-console.log(getAvailableProducts(getItemsByBrand(getItems(data), 'Sony')))
-console.log(getAvailableProducts(getItemsByAuthor(getItems(data), 'Adorama Camera')))
-console.log(getItemsByBrand(getItemsByAuthor(getItems(data), 'eBay'), 'Nikon'))
+// console.log(getItemsByBrand(getItems(data), 'Sony'))
+// console.log(getAvailableProducts(getItemsByBrand(getItems(data), 'Sony')))
+// console.log(getAvailableProducts(getItemsByAuthor(getItems(data), 'Adorama Camera')))
+// console.log(getItemsByBrand(getItemsByAuthor(getItems(data), 'eBay'), 'Nikon'))
