@@ -1,3 +1,9 @@
+// HOW TO IMPROVE CODE:
+// (1) DRY - i repeat the forEach function
+// (2) use "requirejs" properly, so i can refer to other js files housing
+// the functions, instead of copy and pasting here
+// (3) Lay out the Add buttons next to text, rather than on next line
+
 // var functions = require('google-shopping-functions-michelle.js')
 
 // THIS IS NOT WORKING. i ran this in shell, but still "ReferenceError: require is not defined":
@@ -69,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         listButton.setAttribute("type", "button")
         listButton.setAttribute("value", "Add")
         listButton.addEventListener("click", addToCart)
-        shoppingList.appendChild(listButton)
+        listItem.appendChild(listButton)
       })
     }
 
@@ -101,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function addToCart (event) {
       var buttonToRemove = event.target
-      var itemToAddToCart = event.target.previousSibling
+      var itemToAddToCart = event.target.parentNode
       var cartList = document.querySelector('#cart-list')
       buttonToRemove.remove()
       cartList.appendChild(itemToAddToCart)
