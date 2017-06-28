@@ -25,7 +25,7 @@ var items = getItems(data)
 //
 // Test this function by searching for Sony, Canon, Nikon and Panasonic.
 
-function getItemsByBrand(items, brand) {
+var getItemsByBrand = function (items, brand) {
   var itemsByBrandArr = items.filter(function(item) {
     return (item.product.brand === brand)
   })
@@ -37,6 +37,10 @@ function getTitlesOfItems(selectedItems) {
     return item.product.title
   })
   return titlesOfItems
+}
+
+function something() {
+  alert('something')
 }
 
 // console.log(getTitlesOfItems(getItemsByBrand(items, "Canon")))
@@ -80,8 +84,10 @@ function getAvailableProducts(items) {
 // All items made by Sony that are available.
 // All available items by the author "Adorama Camera"
 // All items made by Nikon with the author eBay.
-
 console.log(getTitlesOfItems(getItemsByBrand(items, 'Sony')))
-console.log(getTitlesOfItems(getItemsByBrand(getAvailableProducts(items), 'Sony')))
-console.log(getTitlesOfItems(getItemsByAuthor(getAvailableProducts(items), "Adorama Camera")))
-console.log(getTitlesOfItems(getItemsByAuthor(getItemsByBrand(items,'Nikon'), "eBay")))
+// console.log(getTitlesOfItems(getItemsByBrand(getAvailableProducts(items), 'Sony')))
+// console.log(getTitlesOfItems(getItemsByAuthor(getAvailableProducts(items), "Adorama Camera")))
+// console.log(getTitlesOfItems(getItemsByAuthor(getItemsByBrand(items,'Nikon'), "eBay")))
+
+// module.exports = getItemsByBrand
+// doesn't work to export functions into dom-google-shopping
