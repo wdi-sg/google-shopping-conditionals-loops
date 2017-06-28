@@ -1,0 +1,21 @@
+.container {
+  width: 80%;
+  margin: 0 auto // floating in center
+}
+
+.left-content, .right-content {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.left-content {
+  width: 65%
+}
+
+.right-content {
+  width: 30%
+}
+
+/*li > input {
+  float: right
+}*/
