@@ -26,10 +26,6 @@ function addToCart () {
   }
 // ---------------------------------------------------------------------
 var items = data.items
-var inputBrand = document.querySelector('#brand')
-var filterBrand = String(inputBrand)
-var inputAuthor = document.querySelector('#author')
-var filterAuthor = String(inputAuthor)
 
 function getItemsByBrand (items, brand) {
   var brandItems = []
@@ -40,9 +36,9 @@ function getItemsByBrand (items, brand) {
   }
   return brandItems
 }
-
-var filteredBrand = getItemsByBrand(items, 'Nikon')
-
+//
+// var filteredBrand = getItemsByBrand(items, 'Nikon')
+//
 function getItemsByAuthor (items, author) {
   var authorItems = []
   for (var i = 0; i < items.length; i++) {
@@ -53,9 +49,22 @@ function getItemsByAuthor (items, author) {
   return authorItems
 }
 
-var finalFilter = getItemsByAuthor(filteredBrand, 'pictureline.com')
+// var finalFilter = getItemsByAuthor(filteredBrand, 'pictureline.com')
 
+var submitButton = document.querySelector('#submit')
+submitButton.addEventListener('click', submitInput)
 
+function submitInput () {
+  var inputBrand = document.querySelector('#brand').value
+  var inputAuthor = document.querySelector('#author').value
+  var filterBrand = getItemsByBrand(items, inputBrand)
+  var finalFilter = getItemsByAuthor(items, inputAuthor)
+  finalFilter.forEach(function (item) {
+    var listItem = document.createElement('li')
+    listItem.textContent = item.product.title
+    shoppingList.appendChild(listItem)
+  })
+}
 // ---------------------------------------------------------------------
 // ALL YOUR INTERNAL FUNCTIONS SHOULD START FROM HERE AND HERE ONLY TOO
 
@@ -64,7 +73,7 @@ var finalFilter = getItemsByAuthor(filteredBrand, 'pictureline.com')
 
     // Starter code. List out items' name into the shopping list
     // HINT: EVERY FUNCTIONS HERE WILL BE ABLE TO ACCESS THE items VARIABLE
-    finalFilter.forEach(function (item) {
+    items.forEach(function (item) {
       var listItem = document.createElement('li')
       listItem.textContent = item.product.title
       shoppingList.appendChild(listItem)
