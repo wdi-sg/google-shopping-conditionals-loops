@@ -1,0 +1,21 @@
+
+aside {
+  width: 30%;
+  vertical-align: top;
+  display: inline-block;
+}
+input {
+  margin: 5px;
+}
+.container {
+width: 1000px;
+margin: 0 auto;
+}
+h1 {
+  font-size: 30px;
+}
+.shoppinglist, .cartlist {
+  width: 34%;
+  display: inline-block;
+  vertical-align: top;
+}
