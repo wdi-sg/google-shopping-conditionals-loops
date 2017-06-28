@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var brandSearchButton = document.body.querySelector('#brandSearchButton')
     brandSearchButton.addEventListener('click', brandSearchButtonCascade)
 
+    var authorSearchButton = document.body.querySelector('#authorSearchButton')
+    authorSearchButton.addEventListener('click', authorSearchButtonCascade)
+
     function brandSearchButtonCascade (event) {
       // grab text input >> insert into and run getItemsByBrand function
       // delete li's in Shopping List >> append each product as li to Shopping List
@@ -51,6 +54,57 @@ document.addEventListener('DOMContentLoaded', function () {
       // but .value RETURNS UNDEFINED
       // console.log(getItemsByBrand(items, searchInputValue))
       var resultsArr = getItemsByBrand(items, searchInputValue)
+
+      // this below clears the Shopping List of all items
+      while (shoppingList.firstChild) {
+      shoppingList.removeChild(shoppingList.firstChild);
+      }
+
+      resultsArr.forEach(function (item) {
+        var listItem = document.createElement('li')
+        listItem.textContent = item.product.title
+        shoppingList.appendChild(listItem)
+
+        var listButton = document.createElement('input')
+        listButton.setAttribute("type", "button")
+        listButton.setAttribute("value", "Add")
+        listButton.addEventListener("click", addToCart)
+        shoppingList.appendChild(listButton)
+      })
+    }
+
+    function authorSearchButtonCascade (event) {
+      // grab text input >> insert into and run getItemsByAuthor function
+      // delete li's in Shopping List >> append each product as li to Shopping List
+
+      var searchInput = document.querySelector('#authorSearchText')
+      var searchInputValue = searchInput.value
+      var resultsArr = getItemsByAuthor(items, searchInputValue)
+
+      // this below clears the Shopping List of all items
+      while (shoppingList.firstChild) {
+      shoppingList.removeChild(shoppingList.firstChild);
+      }
+
+      resultsArr.forEach(function (item) {
+        var listItem = document.createElement('li')
+        listItem.textContent = item.product.title
+        shoppingList.appendChild(listItem)
+
+        var listButton = document.createElement('input')
+        listButton.setAttribute("type", "button")
+        listButton.setAttribute("value", "Add")
+        listButton.addEventListener("click", addToCart)
+        shoppingList.appendChild(listButton)
+      })
+    }
+
+    function addToCart (event) {
+      var buttonToRemove = event.target
+      var itemToAddToCart = event.target.previousSibling
+      var cartList = document.querySelector('#cart-list')
+      buttonToRemove.remove()
+      cartList.appendChild(itemToAddToCart)
     }
 
     var getItemsByBrand = function (items, brand) {
