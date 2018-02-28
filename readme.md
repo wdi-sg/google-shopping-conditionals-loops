@@ -2,13 +2,13 @@
 
 We'll be using a file represented as **JSON** for this assignment. JSON is a standard for formatting data, and it's a common format you'll see throughout your web development career. Even more important will be parsing JSON.
 
+This large object is in the products js file. It is the kind of object you would really recieve from google shopping.
+
 ## Getting Started
-* Fork and clone this repository to your computer
-* Run `npm install` to install dependencies
-* Look in the starter file in `js`, called `google-shopping.js`. We'll be using Node to read the JSON file and access it as a JavaScript object
-* Run the file by typing `node js/google-shopping.js` into the console. If you get items printing out, you're ready to start on the assignment.
-  * Alternatively, `npm start` can also be used
-  * Alternatively, you can also create a separate file for each problem. Keep in mind you'll want to use the `node` command instead of `npm start` when dealing with multiple files.
+Create a script.js file and an index.html file with the same boiler plate code as before.
+Copy the products.js file into that directory.
+In the html file, include the script products.js.
+Write your code in your script.js file.
 
 ## Deliverables
 
