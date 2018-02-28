@@ -35,7 +35,7 @@ function searchByImageNumber (lowerThreshold) {
 function searchByBrand (brand) {
     clear();
     let searchFilter = brand.toLowerCase();
-    itemsArray.forEach(item => {if (item.product.brand.toLowerCase() == searchFilter) {
+    itemsArray.forEach(item => {if (item.product.brand.toLowerCase().indexOf(searchFilter) >= 0) {
         print(item.product.title);
     }}); 
 }
@@ -44,7 +44,7 @@ function searchByAuthorNameAndBrand (author, brand) {
     clear();
     let searchFilter_Author = author.toLowerCase();
     let searchFilter_Brand = brand.toLowerCase();
-    itemsArray.forEach(item => {if (item.product.brand.toLowerCase() == searchFilter_Brand && item.product.author.name.toLowerCase() == searchFilter_Author) {
+    itemsArray.forEach(item => {if (item.product.brand.toLowerCase().indexOf(searchFilter_Brand) >= 0 && item.product.author.name.toLowerCase().indexOf(searchFilter_Author) >= 0) {
         print(item.product.title);
     }}); 
 }
