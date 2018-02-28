@@ -39,3 +39,34 @@ for (var i=0; i<products['items'].length;i++) {
   console.log('Price: ' + item['product']['inventories'][0]['price']);
   console.log('Image link: ' + item['product']['images'][0]['link']);
 }
+
+// Class exercises
+var time = function() {
+  console.log("hello");
+};
+
+// var five_secs_timeout = setTimeout(time("hello"), 5000);
+
+var five_secs_interval = setInterval(time, 1000);
+setTimeout(function() {clearInterval(five_secs_interval)}, 20000);
+
+var multiply = function(a,b) {
+  return a*b;
+}
+
+var listOfNumbers = [91,52,53,54,5,6,7,8];
+// var listOfNumbers = [1,1,1,1];
+
+var repeatOperation = function(numbers, callback){
+
+  var currentResult = 1; // start with one since we are multiplying
+
+  for( var i=0; i<numbers.length; i++){
+    console.log(currentResult);
+    currentResult = callback(currentResult, numbers[i]);
+  }
+
+  return currentResult;
+};
+
+var total = repeatOperation(listOfNumbers, multiply);
