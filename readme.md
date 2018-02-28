@@ -14,7 +14,7 @@ Write your code in your script.js file.
 
 Use the product search result in your file to find the following results. Note that you may want to comment out your solutions as you solve them, to avoid a mess of output in the terminal.
 
-Remember to type `node js/google-shopping.js` to run the file (or `npm start`).
+<!-- Remember to type `node js/google-shopping.js` to run the file (or `npm start`). -->
 
 1.) Go through the `items` and find all results that have `kind` of `shopping#product`. Print the count of these results. Where else is this count information stored in the search results?
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Results</title>
+    <script src="products.js"></script>
+    <style>
+    button {
+        margin: 2px 10px;
+    }
+    </style>
+</head>
+<body>
+    <button onclick="countByKind('shopping#product')">Count the number of items of kind shopping#product</button>
+    <button onclick="searchByAvailability('inStock')">List inStock Items</button>
+    <button onclick="searchByImageNumber(1)">List items with more than 1 image</button>
+    <button onclick="searchByBrand('Canon')">Search for Canon stuff</button>
+    <button onclick="searchByAuthorNameAndBrand('eBay', 'Canon')">Search for Canon stuff from eBay</button>
+    <button onclick="printProductBrandPriceImglink()">Print product brand, price tags, and image links</button>
+    <div id="output"></div>
+    <script src="script.js"></script>
+</body>
+</html>
