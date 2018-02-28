@@ -29,7 +29,7 @@ Use the product search result in your file to find the following results. Note t
 
 ## Hints
 
-* We'll be dealing with large JSON objects quite frequently throughout the course. Use a Chrome extension such as [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) in order to easily collapse arrays and objects during this assignment. Once the extension is installed, access the JSON file via Github by going to **products.json**, then clicking **Raw** right above the file.
+* If you type in the variable name `products` in the google chrome developer console, you can see and inspect all the items in the product object.
 * When in doubt, think about the different functions available for **strings**, **objects**, and **arrays**.
 * Double-check your results, especially with #5
 * Documentation
