@@ -1,3 +1,5 @@
+
+console.log("test");
 var data = require('../products.json');
 
 // Write your solutions below
