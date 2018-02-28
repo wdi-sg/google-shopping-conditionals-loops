@@ -5,10 +5,13 @@ We'll be using a file represented as **JSON** for this assignment. JSON is a sta
 This large object is in the products js file. It is the kind of object you would really recieve from google shopping.
 
 ## Getting Started
-Create a script.js file and an index.html file with the same boiler plate code as before.
-Copy the products.js file into that directory.
-In the html file, include the script products.js.
-Write your code in your script.js file.
+Create a `script.js` file and an index.html file with the same boiler plate code as before.
+
+Copy the `products.js` file into that directory.
+
+In the html file, include the script `products.js`. Remember that the order of the script tags matters.
+
+Write your functions in the `js/google-shopping.js` file. Run your functions in your `script.js` file.
 
 ## Deliverables
 
