@@ -4,6 +4,7 @@ We'll be using a file represented as **JSON** for this assignment. JSON is a sta
 
 This large object is in the products js file. It is the kind of object you would really recieve from google shopping.
 
+
 ## Getting Started
 Create a `script.js` file and an index.html file with the same boiler plate code as before.
 
@@ -31,6 +32,9 @@ Use the product search result in your file to find the following results. Note t
 
 
 ## Hints
+* install a sublime package if you want to be able to see the object more clearly: [https://packagecontrol.io/packages/SyntaxFold](https://packagecontrol.io/packages/SyntaxFold)
+
+* it allows you to "fold" your code to see the format of it.
 
 * If you type in the variable name `products` in the google chrome developer console, you can see and inspect all the items in the product object.
 * When in doubt, think about the different functions available for **strings**, **objects**, and **arrays**.
