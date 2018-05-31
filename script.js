@@ -8,9 +8,9 @@ productItems.forEach(function(item){
 });
 
 console.log(count);
-*/
 
-//option 2
+
+//Q1 option 2
 var productsItems = products.items;
 function kindShoppingProduct(x) {
   var kSP = 0;
@@ -25,6 +25,7 @@ console.log(kindShoppingProduct(productsItems));
 
 //Also found in "itemPerPage" and "currentItemCount"
 
+//Q2
 var productsItems = products.items;
 function availabilitybackorder(x) {
   for (var i = 0; i < x.length; i++){
@@ -34,4 +35,14 @@ function availabilitybackorder(x) {
   }
 }
 console.log(availabilitybackorder(productsItems));
-
+*/
+//Q3
+var productsItems = products.items;
+function moreThanOneImage(x) {
+  for (var i = 0; i < x.length; i++){
+    if (x[i].product.images.length > 1){
+      console.log(x[i].product.title);
+    }
+  }
+}
+console.log(moreThanOneImage(productsItems));
