@@ -9,7 +9,11 @@ var products = {
  "itemsPerPage": 25,
  "currentItemCount": 25,
  "requestId": "0CPCXpoKU8bcCFeohRAodikIAAA",
- "items": [
+ "items": ""
+}
+
+
+var productList = [
   {
    "kind": "shopping#product",
    "id": "tag:google.com,2010:shopping/products/7774881/11180453840663864493",
@@ -1136,4 +1140,11 @@ var products = {
    }
   }
  ]
-}
+
+
+
+
+
+
+
+
