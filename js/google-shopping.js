@@ -3,10 +3,18 @@
 console.log(products);
 
 // Go through the items and find all results that have kind of shopping#product. 
-
+function findObjectByKey("items", "kind", "shopping#product" {
+    for (var i = 0; i < items.length; i++) {
+        if (items[i][key] === value) {
+            return items[i];
+        }
+    }
+    return null;
+}
 
 // Print the count of these results. 
-
+var counter = products.item.length;
+console.log(counter);
 
 // Where else is this count information stored in the search results?
 
