@@ -39,8 +39,22 @@ for (var i = 0 ; i < products.items.length; i ++) {
 //4.) Print all "Canon" products in the items 
 //(careful with case sensitivity).
 
-//5.) Print all `items` that have an author name of "eBay" 
+for (var i = 0 ; i < products.items.length; i ++) {
+	if (products.items[i].product.brand == "Canon") {
+		console.log(products.items[i].product.title)
+	}
+}
+
+//5.) Print all `items` 
+//that have an author name of "eBay" 
 //and are brand "Canon".
+
+for (var i = 0 ; i < products.items.length; i ++) {
+	if (products.items[i].product.brand == "Canon" 
+		&& products.items[i].product.author.name.includes('eBay')) {
+		console.log(products.items[i])
+	}
+}
 
 //6.) Print all the products with their
 // **brand**, **price**, and an **image link**
