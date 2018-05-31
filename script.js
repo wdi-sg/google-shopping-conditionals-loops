@@ -54,7 +54,32 @@ for (var i = 0 ; i < products.items.length; i ++) {
 		&& products.items[i].product.author.name.includes('eBay')) {
 		console.log(products.items[i])
 	}
-}
+} 
 
 //6.) Print all the products with their
 // **brand**, **price**, and an **image link**
+
+for (var i = 0 ; i < products.items.length; i ++) 
+
+	{
+	console.log(products.items[i].product.brand) ;
+	console.log(products.items[i].product.inventories[0].price);
+	console.log(products.items[i].product.images);
+	}
+
+
+/*{ chrome console returns objects as object objects when trying to be formed as part of string. 
+
+	var brand = (products.items[i].product.brand) ;
+	var price =	(products.items[i].product.inventories[0].price)
+	var imageLinks = (products.items[i].product.images)
+	console.log(brand + ' $' + price + ' ' + imageLinks)
+} */
+
+
+
+
+
+
+
+
