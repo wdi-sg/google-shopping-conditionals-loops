@@ -46,7 +46,7 @@ function deliverablesFive(json) {
 
   for (i = 0; i < myArray.length; i++) {
     if (myArray[i]["product"]["author"]["name"] == "eBay" && myArray[i]["product"]["brand"] == "Canon") {
-      console.log("Deliverables 6 - Item Title: " + myArray[i]["product"]["title"]);
+      console.log("Deliverables 5 - Item Title: " + myArray[i]["product"]["title"]);
     };
   };
 };
