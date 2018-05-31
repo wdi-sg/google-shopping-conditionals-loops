@@ -6,8 +6,8 @@ var products = {
  "nextLink": "https://www.googleapis.com/shopping/search/v1/public/products?country=US&q=digital+camera&startIndex=26&alt=json",
  "totalItems": 5788536,
  "startIndex": 1,
- "itemsPerPage": 25,
- "currentItemCount": 25,
+"itemsPerPage": 25,
+ "currentItemCount": 25 ,
  "requestId": "0CPCXpoKU8bcCFeohRAodikIAAA",
  "items": [
   {
