@@ -72,6 +72,6 @@ var brand = [];
 var price = [];
 var imgLink = [];
 
-for (var i=0, i<products.length; i++) {
+for (var i=0; i<products.length; i++) {
   console.log("Brand: " + brand + ", Price: $" + price + ", Image: " + imgLink);
 }
