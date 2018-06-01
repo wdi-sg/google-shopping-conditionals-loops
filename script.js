@@ -62,7 +62,7 @@ allCanon(productsItems);
 var productsItems = products.items;
 function printItems(x) {
   for (var i = 0; i < x.length; i++){
-    if (x[i].product.author.name.indexOf("eBay") && x[i].product.brand.indexOf("Canon")){
+    if (x[i].product.author.name.indexOf("eBay") >= 0 && x[i].product.brand.indexOf("Canon") >= 0){
       console.log(x[i]);
     }
   }
