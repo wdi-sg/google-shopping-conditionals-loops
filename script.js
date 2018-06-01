@@ -36,7 +36,7 @@ function availabilitybackorder(x) {
 }
 console.log(availabilitybackorder(productsItems));
 
-
+*/
 //Q3
 var productsItems = products.items;
 function moreThanOneImage(x) {
@@ -46,9 +46,9 @@ function moreThanOneImage(x) {
     }
   }
 }
-console.log(moreThanOneImage(productsItems));
+moreThanOneImage(productsItems);
 
-*/
+/*
 var productsItems = products.items;
 function allCanon(x) {
   for (var i = 0; i < x.length; i++){
@@ -58,3 +58,4 @@ function allCanon(x) {
   }
 }
 allCanon(productsItems);
+*/
