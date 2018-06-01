@@ -63,9 +63,35 @@ function deliverablesSix(json) {
   };
 };
 
-deliverablesOne(products);
-deliverablesTwo(products);
-deliverablesThree(products);
-deliverablesFour(products);
-deliverablesFive(products);
-deliverablesSix(products);
+function fullDeliverablesFunction(json, deliverableCase) {
+  switch (deliverableCase) {
+    case 1:
+      deliverablesOne(json);
+      break;
+    case 2:
+      deliverablesTwo(json);
+      break;
+    case 3:
+      deliverablesThree(json);
+      break;
+    case 4:
+      deliverablesFour(json);
+      break;
+    case 5:
+      deliverablesFive(json);
+      break;
+    case 6:
+      deliverablesSix(json);
+      break;
+  };
+};
+
+// deliverablesOne(products);
+// deliverablesTwo(products);
+// deliverablesThree(products);
+// deliverablesFour(products);
+// deliverablesFive(products);
+// deliverablesSix(products);
+for (j=1; j < 7; j++) {
+  fullDeliverablesFunction(products, j);
+};
