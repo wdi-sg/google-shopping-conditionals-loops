@@ -48,18 +48,18 @@ function moreThanOneImage(x) {
   }
 }
 moreThanOneImage(productsItems);
-
+*/
 //Q4
 var productsItems = products.items;
 function allCanon(x) {
   for (var i = 0; i < x.length; i++){
-    if (x[i].product.title.indexOf("Canon") >= 0){
+    if (x[i].product.brand.indexOf("Canon") >= 0){
       console.log(x[i].product.title);
     }
   }
 }
 allCanon(productsItems);
-
+/*
 //Q5
 var productsItems = products.items;
 function printItems(x) {
@@ -70,7 +70,7 @@ function printItems(x) {
   }
 }
 printItems(productsItems);
-*/
+
 
 //Q6
 var productsItems = products.items;
@@ -82,3 +82,4 @@ function printProductsWithBrandPriceImage(x) {
     }
 }
 printProductsWithBrandPriceImage(productsItems);
+*/
