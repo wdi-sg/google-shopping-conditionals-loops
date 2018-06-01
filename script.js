@@ -1,4 +1,8 @@
+// Deliverable 1
 console.log("Deliverables 1: " + products.items.length);
+
+
+// Deliverable 2
 for (var i = 0; i < products.items.length; i++) {
 	var checkAvailability = products.items[i].product.inventories[0].availability;
 	if (checkAvailability === "backorder") {
@@ -6,6 +10,8 @@ for (var i = 0; i < products.items.length; i++) {
 	}
 }
 
+
+// Deliverable 3
 for (var i = 0; i < products.items.length; i++) {
 	var checkImageLinks = products.items[i].product.images.length;
 	if (checkImageLinks > 1) {
@@ -13,6 +19,8 @@ for (var i = 0; i < products.items.length; i++) {
 	}
 }
 
+
+// Deliverable 4
 for (var i = 0; i < products.items.length; i++) {
 	var checkBrand = products.items[i].product.brand;
 	if (checkBrand === 'Canon') {
@@ -20,6 +28,8 @@ for (var i = 0; i < products.items.length; i++) {
 	}
 }
 
+
+// Deliverable 5
 for (var i = 0; i < products.items.length; i++) {
 	var checkBrand = products.items[i].product.brand;
 	var checkAuthor = products.items[i].product.author.name;
@@ -28,30 +38,11 @@ for (var i = 0; i < products.items.length; i++) {
 	}
 }
 
+
+// Deliverable 6
 for (var i = 0; i < products.items.length; i++) {
 	var checkBrand = products.items[i].product.brand;
 	var checkPrice = products.items[i].product.inventories[0].price;
 	var getImageLink = products.items[i].product.images[0].link;
 	console.log("Deliverables 6:\nBrand: " + checkBrand + "\nPrice: " + checkPrice + "\nImage Link: " + getImageLink);
 }
-
-// // 	// 		console.log("1");
-// // 	// 	}
-// // 	// }
-// // 	// console.log("i = " + items);
-// // 	// console.log("p = " + products[items]);
-// // }
-
-// var myArray = products.items;
-
-// // for (i=0; i < myArray.length; i++) {
-// // 	console.log(myArray[i]);
-// // }
-// var itemToCheck = myArray[0];
-// // for (items in itemToCheck) {
-// // 	console.log(items);
-// // }
-
-// var itemChecking = itemToCheck.product.inventories[0];
-
-// console.log(itemChecking);
