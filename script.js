@@ -1,3 +1,4 @@
+//Q1
 //option 1
 /*
 var productsItems = products.items;
@@ -9,8 +10,8 @@ productItems.forEach(function(item){
 
 console.log(count);
 
-
-//Q1 option 2
+//Q1
+//option 2
 var productsItems = products.items;
 function kindShoppingProduct(x) {
   var kSP = 0;
@@ -48,7 +49,7 @@ function moreThanOneImage(x) {
 }
 moreThanOneImage(productsItems);
 
-
+//Q4
 var productsItems = products.items;
 function allCanon(x) {
   for (var i = 0; i < x.length; i++){
@@ -58,7 +59,8 @@ function allCanon(x) {
   }
 }
 allCanon(productsItems);
-*/
+
+//Q5
 var productsItems = products.items;
 function printItems(x) {
   for (var i = 0; i < x.length; i++){
@@ -68,5 +70,15 @@ function printItems(x) {
   }
 }
 printItems(productsItems);
+*/
 
-
+//Q6
+var productsItems = products.items;
+function printProductsWithBrandPriceImage(x) {
+  for (var i = 0; i < x.length; i++){
+      console.log(x[i].product.brand);
+      console.log(x[i].product.inventories[0].price);
+      console.log(x[i].product.images);
+    }
+}
+printProductsWithBrandPriceImage(productsItems);
