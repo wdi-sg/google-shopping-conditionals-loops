@@ -1,25 +1,9 @@
-// Write your solutions below
-// 1.) Go through the items and find all results that have kind of shopping#product. Print the count of these results. Where else is this count information stored in the search results?
-//
-// 2.) Print the title of all items with a backorder availability in inventories.
-//
-// 3.) Print the title of all items with more than one image link.
-//
-// 4.) Print all "Canon" products in the items (careful with case sensitivity).
-//
-// 5.) Print all items that have an author name of "eBay" and are brand "Canon".
-//
-// 6.) Print all the products with their brand, price, and an image link
-
-//console.log(products);
-
 //Before finding out currentItemCount
 console.log("There are: " + products.items.length + " items in the search results!");
 //After finding out about currentItemCount
 console.log("The item count is " + products.currentItemCount);
 // Question 1 done
 
-//global var to shorten names
 var shortify = products.items;
 // finding out the availability products.items[0].product.inventories[0].availability
 for (i = 0; i < shortify.length; i++){
