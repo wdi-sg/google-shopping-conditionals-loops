@@ -32,20 +32,28 @@ console.log(products);
 
 
 // Part 2 // Print the title of all items with a backorder availability in inventories.
+// Part 2 //
+// Part 2 // for ( var i = 0; i < products.items.length; i++ ) {
+// Part 2 //
+// Part 2 //   var item = products.items[i];
+// Part 2 //
+// Part 2 //   if ( item.product.inventories[0].availability === "backorder") {
+// Part 2 //
+// Part 2 //       console.log(`${item.product.title} is backordered.`)
+// Part 2 //   }
+// Part 2 // }
 
-var count = 0
+// Part 3 // Print the title of all items with more than one image link.
 
 for ( var i = 0; i < products.items.length; i++ ) {
 
   var item = products.items[i];
 
-  if ( item.product.inventories[0].availability === "backorder") {
+  if ( item.product.images.length > 1) {
 
-      console.log(`${item.product.title} is backordered.`)
+      console.log(`${item.product.title}`)
   }
 }
-
-// Part 3 // Print the title of all items with more than one image link.
 
 // Part 4 // Print all "Canon" products in the items (careful with case sensitivity).
 
