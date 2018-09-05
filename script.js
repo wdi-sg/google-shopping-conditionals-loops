@@ -18,13 +18,19 @@ for (var i=0; i < products.items.length; i++){
 
 //Location of "backorder" is products.items.product.inventories.availability
 
-for (var i=0; i < products.items.length; i++){
+/*for (var i=0; i < products.items.length; i++){
     if (products.items[i].product.inventories[0].availability === "backorder"){
         console.log(products.items[i].product.title);
     }
-}
+}*/
 
 //Print the title of all items with more than one image link.
+
+for (var i=0; i < products.items.length; i++){
+    if (products.items[i].product.images.length > 1){
+        console.log(products.items[i].product.title);
+    }
+}
 
 //Print all "Canon" products in the items (careful with case sensitivity).
 
