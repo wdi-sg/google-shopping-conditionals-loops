@@ -12,7 +12,8 @@ for (var i = 0; i < products.items.length; i++) {
   };
 };
 
-console.log(`There are ${count} shopping#product items.`);
+console.log('');
+console.log(`1. There are ${count} shopping#product items.`);
 
 //Print the title of all items with a backorder availability in inventories.
 
@@ -21,7 +22,9 @@ console.log(products.items[0]['product']['inventories'][0]['availability']);
 console.log(products.items[0]['product']['title']);
 console.log(products.items[0]['product']['inventories'].length);
 */
-console.log('Products on back order:');
+
+console.log('');
+console.log('2. Products on back order:');
 
 for(var i = 0; i < products.items.length; i++) {
   for (var j = 0; j < products.items[i].product.inventories.length; j++) {
@@ -33,7 +36,8 @@ for(var i = 0; i < products.items.length; i++) {
 
 //Print the title of all items with more than one image link.
 
-console.log('Products with more than 1 image:');
+console.log('');
+console.log('3. Products with more than 1 image:');
 
 for(var i = 0; i < products.items.length; i++) {
   if (products.items[i].product.images.length > 1) {
@@ -43,7 +47,8 @@ for(var i = 0; i < products.items.length; i++) {
 
 //Print all "Canon" products in the items (careful with case sensitivity).
 
-console.log('Products of Canon Brand:');
+console.log('');
+console.log('4. Products of Canon Brand:');
 
 for(var i = 0; i < products.items.length; i++) {
   //console.log(products.items[i].product.brand);
@@ -54,11 +59,25 @@ for(var i = 0; i < products.items.length; i++) {
 
 //Print all items that have an author name of "eBay" and are brand "Canon".
 
-console.log('Canon Products from eBay:');
+console.log('');
+console.log('5. Canon Products from eBay:');
 
 for(var i = 0; i < products.items.length; i++) {
   //console.log(products.items[i].product.brand);
   if (products.items[i].product.brand === 'Canon' && products.items[i].product.author.name.indexOf('eBay') !== -1) {
     console.log(products.items[i].product.title);
   }
+}
+
+//Print all the products with their brand, price, and an image link
+
+console.log('');
+console.log('6. Products Listing:');
+for(i in products.items) {
+  var brand = products.items[i].product.brand;
+  var imageLink = products.items[i].product.images[0].link;
+  for (j in products.items[i].product.inventories) {
+    var price = products.items[i].product.inventories[j].price;
+  }
+  console.log(`Brand: ${brand}, Price: ${price}, Image: ${imageLink}`);
 }
