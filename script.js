@@ -37,7 +37,6 @@ for(var i=0; i < products.items.length; i++){
 
     //Print product title of identified match
     console.log(products.items[i].product.title);
-  }
 }*/
 
 //Q4
@@ -51,10 +50,18 @@ for(var i=0; i < products.items.length; i++){
 
 //Q5
   //Find condition for all author == 'eBay' && brand == 'canon'
-  if(products.items[i].product.author.name.includes("eBay") &&
+  /*if(products.items[i].product.author.name.includes("eBay") &&
         products.items[i].product.brand.toLowerCase() === "canon"){
 
     //Print product title of identified match
     console.log(products.items[i].product.title);
   }
+}*/
+
+//Q6
+  //Print all the products with following details
+  console.log(products.items[i].product.title); //name
+  console.log(products.items[i].product.brand); //brand
+  console.log("USD " +parseInt(products.items[i].product.inventories[0].price)); //price
+  console.log(products.items[i].product.link); //image link
 }
