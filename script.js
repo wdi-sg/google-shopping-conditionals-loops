@@ -56,7 +56,6 @@ console.log('');
 console.log('5. Canon Products from eBay:');
 
 for(var i = 0; i < products.items.length; i++) {
-  //console.log(products.items[i].product.brand);
   if (products.items[i].product.brand === 'Canon' && products.items[i].product.author.name.indexOf('eBay') !== -1) {
     console.log(products.items[i].product.title);
   }
@@ -75,18 +74,38 @@ for(i in products.items) {
   console.log(`Brand: ${brand}, Price: ${price}, Image: ${imageLink}`);
 }
 
+
+//FURTHER SECTION
+
 //Prompt the user for the product brand and print only those products.
 //Prompt the user if they want to see only new or used items.
+//Prompt the user what kind of search they want to do- search by brand or search by condition.
+
+var userPref = prompt('Do you want search by item brand or condition?', 'brand or condition').toLowerCase();
+
+//Then prompt the user to put in ther actual search value- (new/used for condition or brand name for brand)
+
+if (userPref === 'brand')
+  var userBrand = prompt('What brand are you looking for?').toLowerCase();
+else if (userPref === 'condition')
+  var userCondition = prompt('Do you prefer new or used?', 'new or used').toLowerCase();
 
 console.log('')
 console.log('User search results:')
 
-var userBrand = prompt('What brand are you looking for?').toLowerCase();
-var userCondition = prompt('Do you prefer new or used?', 'new or used').toLowerCase();
+count = 0
 
 for(i in products.items){
   var brand = products.items[i].product.brand;
   var condition = products.items[i].product.condition;
-  if ((brand.toLowerCase().indexOf(userBrand) !== -1) && (condition.toLowerCase().indexOf(userCondition) !== -1))
+  if ((brand.toLowerCase().indexOf(userBrand) !== -1) || (condition.toLowerCase().indexOf(userCondition) !== -1)) {
     console.log(products.items[i].product.title);
+    count++;
+  }
 }
+
+//Print out some special error text (e.g. "Sorry, nothing found") if there were no results.
+if (count <= 0)
+  console.log("Sorry, nothing found");
+else
+  console.log(`Total ${count} results.`)
