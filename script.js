@@ -70,6 +70,7 @@ for (var i=0; i<products.items.length; i++){
 
 
 //Futher: Prompt the user for the product brand and print only those products.
+
 var stringPrompt = prompt(`Please enter one of the following product brands. \n
   Canon, Sony, Nikon, Panasonic, Samsung, Fuji, Pentax`);
 var userBrand = stringPrompt.charAt(0).toUpperCase()+stringPrompt.slice(1);
