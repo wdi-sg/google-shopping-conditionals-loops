@@ -73,36 +73,41 @@
 
 
 // Part 5 // Print all items that have an author name of "eBay" and are brand "Canon".
-// Part 5 //
-// Part 5 // for ( var i = 0; i < products.items.length; i++ ) {
-// Part 5 //
-// Part 5 //   var item = products.items[i];
-// Part 5 //
-// Part 5 //   if ( item.product.author.name === "eBay" && item.product.brand === "Canon") {
-// Part 5 //
-// Part 5 //       console.log(item)
-// Part 5 //   }
-// Part 5 // }
+
+ for ( var i = 0; i < products.items.length; i++ ) {
+
+   var item = products.items[i];
+
+   if ( item.product.author.name.includes("eBay") && item.product.brand === "Canon") {
+
+       console.log(item)
+   }
+ }
+
 
 // Part 6 // Print all the products with their brand, price, and an image link
-
-for ( var i = 0; i < products.items.length; i++ ) {
-
-  var item = products.items[i];
-
-  console.log(item.product)
-  console.log(`Brand: ${item.product.brand}`)
-  console.log(`Price: $${item.product.inventories[0].price}`)
-  console.log(`Image Link: ${item.product.images[0].link}`)
-
-}
-
-
+// Part 6 //
+// Part 6 // for ( var i = 0; i < products.items.length; i++ ) {
+// Part 6 //
+// Part 6 //   var item = products.items[i];
+// Part 6 //
+// Part 6 //   console.log(item.product)
+// Part 6 //   console.log(`Brand: ${item.product.brand}`)
+// Part 6 //   console.log(`Price: $${item.product.inventories[0].price}`)
+// Part 6 //   console.log(`Image Link: ${item.product.images[0].link}`)
+// Part 6 //
+// Part 6 // }
 
 
+// Part 7 // Prompt the user for the product brand and print only those products.
 
+// Part 8 // Prompt the user if they want to see only new or used items.
 
+// Part 9 // Prompt the user what kind of search they want to do- search by brand or search by condition.
 
+// Part 10 // Then prompt the user to put in ther actual search value- (new/used for condition or brand name for brand)
+
+// Part 11 // Print out some special error text (e.g. "Sorry, nothing found") if there were no results.
 
 
 
