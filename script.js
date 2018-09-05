@@ -73,20 +73,29 @@
 
 
 // Part 5 // Print all items that have an author name of "eBay" and are brand "Canon".
+// Part 5 //
+// Part 5 // for ( var i = 0; i < products.items.length; i++ ) {
+// Part 5 //
+// Part 5 //   var item = products.items[i];
+// Part 5 //
+// Part 5 //   if ( item.product.author.name === "eBay" && item.product.brand === "Canon") {
+// Part 5 //
+// Part 5 //       console.log(item)
+// Part 5 //   }
+// Part 5 // }
+
+// Part 6 // Print all the products with their brand, price, and an image link
 
 for ( var i = 0; i < products.items.length; i++ ) {
 
   var item = products.items[i];
 
-  if ( item.product.author.name === "eBay" && item.product.brand === "Canon") {
+  console.log(item.product)
+  console.log(`Brand: ${item.product.brand}`)
+  console.log(`Price: $${item.product.inventories[0].price}`)
+  console.log(`Image Link: ${item.product.images[0].link}`)
 
-      console.log(item)
-  }
 }
-
-// Part 6 // Print all the products with their brand, price, and an image link
-
-
 
 
 
