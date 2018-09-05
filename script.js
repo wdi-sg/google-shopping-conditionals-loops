@@ -1,14 +1,40 @@
 //Q1
 //Initialise var count
 var count = 0;
+var productBrandInput;
+var productConditionInput;
 
-//Prompt user for product brand
-productBrandInput = prompt("Search for brands");
+//Prompt user for search input
+searchInput = prompt("Search by brand or Search by condition?",
+"brand or condition");
 
-//Prompt user for condition of product
-productConditionInput = prompt("Do you want to filter the search?", "New, Used or Both")
+if(searchInput.toLowerCase() === "brand"){
+  //Prompt user for product brand
+  productBrandInput = prompt("Enter product brands: ", "canon, nikon, etc");
+  for(var i=0; i < products.items.length; i++){
+    if(productBrandInput.toLowerCase() === products.items[i].product.brand.toLowerCase()){
+      console.log(products.items[i].product.title);
+    }
+    else{
+      console.log("Sorry, nothing found");
+    }
+  }
+}
+else if(searchInput.toLowerCase() === "condition"){
+  //Prompt user for condition of product
+  productConditionInput = prompt("Enter product condition: ", "new or used");
+  for(var i=0; i < products.items.length; i++){
+    if(productConditionInput.toLowerCase() === products.items[i].product.condition.toLowerCase()){
+      console.log(products.items[i].product.title);
+    }
+    else{
+      console.log("Sorry, nothing found");
+    }
+  }
+}
+
 //Look through all array(items) in products
-for(var i=0; i < products.items.length; i++){
+//for(var i=0; i < products.items.length; i++){ //
 
   //Print all 25 items
   /*console.log(products.items[i]);
@@ -72,10 +98,17 @@ for(var i=0; i < products.items.length; i++){
 }*/
 
 //Further
-  //Compare input with array(list) of product brand values
-  if(productBrandInput.toLowerCase() === products.items[i].product.brand.toLowerCase()){
+  //Compare input with product brand
+  /*if(productBrandInput.toLowerCase() === products.items[i].product.brand.toLowerCase()){
 
     //Print only those products
     console.log(products.items[i].product.title);
   }
-}
+  //Compare input with product condition
+  else if(productConditionInput.toLowerCase() === products.items[i].product.condition.toLowerCase()){
+    console.log(products.items[i].product.title);
+  }
+  else{
+    console.log("Sorry, nothing found");
+  }
+}*/
