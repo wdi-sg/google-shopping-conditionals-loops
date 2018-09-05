@@ -81,6 +81,7 @@ for (var i = 0; i < items.length; i++) {
 
 console.log('');
 console.log('6. Products Listing:');
+
 for (i in items) {
   brand = items[i].product.brand;
   imageLink = items[i].product.images[0].link;
@@ -119,10 +120,10 @@ for (i in items) {
 
   brand = items[i].product.brand;
   condition = items[i].product.condition;
-  title = items[i].product.title;
+  //title = items[i].product.title;
 
   if ((brand.toLowerCase().indexOf(userBrand) !== -1) || (condition.toLowerCase().indexOf(userCondition) !== -1)) {
-    console.log(title);
+    console.log(Object.entries(items[i].product));
     count++;
   }
 }
