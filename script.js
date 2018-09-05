@@ -16,7 +16,9 @@ console.log(products);
 //  }
 // }
 
-
+// Part 1 // Go through the items and find all results that have kind of shopping#product. Print the count of these results.
+// Part 1 // Where else is this count information stored in the search results?
+// Part 1 //
 // Part 1 // var count = 0;
 // Part 1 //
 // Part 1 // for ( var i = 0; i < products.items.length; i++ ) {
@@ -43,19 +45,30 @@ console.log(products);
 // Part 2 //   }
 // Part 2 // }
 
+
 // Part 3 // Print the title of all items with more than one image link.
+// Part 3 //
+// Part 3 // for ( var i = 0; i < products.items.length; i++ ) {
+// Part 3 //
+// Part 3 //   var item = products.items[i];
+// Part 3 //
+// Part 3 //   if ( item.product.images.length > 1) {
+// Part 3 //
+// Part 3 //       console.log(`${item.product.title}`)
+// Part 3 //   }
+// Part 3 // }
+
+// Part 4 // Print all "Canon" products in the items (careful with case sensitivity).
 
 for ( var i = 0; i < products.items.length; i++ ) {
 
   var item = products.items[i];
 
-  if ( item.product.images.length > 1) {
+  if ( item.product.brand === "Canon") {
 
-      console.log(`${item.product.title}`)
+      console.log(item.product)
   }
 }
-
-// Part 4 // Print all "Canon" products in the items (careful with case sensitivity).
 
 // Part 5 // Print all items that have an author name of "eBay" and are brand "Canon".
 
