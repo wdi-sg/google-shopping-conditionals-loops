@@ -1,11 +1,11 @@
 /*
 Name:Abdul Hakim
 Date 050918
-Purpose:Homework 2 google
-*/
+Purpose:Homework 2 google-shopping
+
 
 //part 1
-/*
+
 var count = 0 ;
 var items = products.items ;
 
@@ -15,12 +15,11 @@ for (var counter = 0 ; counter < items.length ; counter++){
     }
 }
 
-console.l
-og(count) ;
-*/
+console.log(count) ;
+
+
 //part 2
 
-/*
 var items = products.items
 
 for(var i = 0; i < items.length; i++) {
@@ -29,10 +28,8 @@ for(var i = 0; i < items.length; i++) {
   }
 }
 
-*/
 
 //part 3
-/*
 
 var items = products.items
 
@@ -43,11 +40,8 @@ for(var i=0; i<items.length; i++){
 
 }
 
-*/
-
 //part 4
 
-/*
 var items = products.items
 
 for(var i=0 ; i<items.length ; i++){
@@ -56,11 +50,8 @@ for(var i=0 ; i<items.length ; i++){
   }
 }
 
-*/
-
 //part 5
 
-/*
 var items = products.items
 
 for(var i =0 ; i<items.length ; i++){
@@ -69,14 +60,71 @@ for(var i =0 ; i<items.length ; i++){
   }
 }
 
-*/
+//part 6
 
 var items = products.items
 
 for(var i=0 ; i<items.length ; i++){
     console.log(items[i].product.brand)
     console.log(items[i].product.inventories[0].price)
-    console.log(items[i].product.images.length)}
+    console.log(items[i].product.images[0].link)}
+
+//////////////FURTHER/////////////////////
+
+//Further 1
+var brand= prompt("please enter brand")
+var condition = prompt("please enter condition")
+var items = products.items
+
+for(var i=0 ; i<items.length ; i++){
+  if(brand === items[i].product.brand ){
+    if(condition ===items[i].product.condition){
+  console.log(items[i].product.title)
+  console.log(items[i].product.condition)
+    }
+  }
+}
+
+*/
+
+//Further 2
+
+var items = products.items
+var input = prompt ("Search by : Enter condition or brand");
+
+if(input === "condition"){
+  var inputCondition=prompt("Enter used or new")
+  }
+else {
+  var inputBrand=prompt("Enter brand")
+  }
+
+
+for(var i=0 ; i<items.length ; i++){
+  if(inputCondition === items[i].product.condition){
+    console.log(items[i].product.title)
+  }
+  else if(inputBrand === items[i].product.brand){
+    console.log(items[i].product.title)
+  }
+  else if (input !== items[i].product.condition && input !== items[i].product.brand){
+    console.log("nothing") //further 3
+    break
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
