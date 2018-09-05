@@ -26,13 +26,19 @@ for (var i=0; i < products.items.length; i++){
 
 //Print the title of all items with more than one image link.
 
-for (var i=0; i < products.items.length; i++){
+/*for (var i=0; i < products.items.length; i++){
     if (products.items[i].product.images.length > 1){
         console.log(products.items[i].product.title);
     }
-}
+}*/
 
 //Print all "Canon" products in the items (careful with case sensitivity).
+
+for (var i=0; i < products.items.length; i++){
+    if (products.items[i].product.brand === "Canon"){
+        console.log(products.items[i].product.title);
+    }
+}
 
 //Print all items that have an author name of "eBay" and are brand "Canon".
 
