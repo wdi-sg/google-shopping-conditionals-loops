@@ -19,11 +19,18 @@ if (products.items[i].product.inventories[0].availability === "backorder"){
   }
 }*/
 
-
-
-//start for Print the title of all items with more than one image link.
+/*start for Print the title of all items with more than one image link.
 for (var i = 0; i <products.items.length; i++){
   if (products.items[i].product.images.length > 1){
     console.log(products.items[i].product.title)
   }
 }
+end of part 3*/
+
+//start of part 4
+for (var i = 0; i < products.items.length; i++){
+  if (products.items[i].product.brand ==="Canon"){
+    console.log(products.items[i].product.title)
+    }
+  }
+  // end of part 4
