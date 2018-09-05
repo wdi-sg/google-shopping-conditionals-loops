@@ -31,8 +31,13 @@ console.log(products)
 // };
 
 //Part 5
+// for (var i = 0; i < products.items.length; i++) {
+// 	if ((products.items[i].product.author.name === "eBay") && (products.items[i].product.brand === "Canon")) {
+// 		console.log(products.items[i].product.title)
+// 	}
+// };
+
+//Part 6
 for (var i = 0; i < products.items.length; i++) {
-	if ((products.items[i].product.author.name === "eBay") && (products.items[i].product.brand === "Canon")) {
-		console.log(products.items[i].product.title)
-	}
+	console.log(products.items[i].product.brand, products.items[i].product.inventories[0].price, products.items[i].product.images[0].link);
 };
