@@ -1,14 +1,6 @@
 // count shopping#product
 var shoppingProductsCount = 0;
 
-var printItem = function (i) {
-  console.log("Number: " + (i + 1));
-  console.log("Title:" + products.items[i].product.title);
-  console.log("Brand: " + products.items[i].product.brand);
-  console.log("Price: " + products.items[i].product.inventories[0].price);
-  console.log("Image Link: " + products.items[i].product.images[0].link);
-}
-
 for (var i = 0; i < products.items.length; i++) {
   if (products.items[i].kind === "shopping#product") {
     shoppingProductsCount ++;
@@ -33,7 +25,7 @@ for (var i = 0; i < products.items.length; i++) {
 
 //print all "Canon" products
 for (var i = 0; i < products.items.length; i++) {
-  brand = products.items[i].product.brand;
+  var brand = products.items[i].product.brand;
   if (brand.toLowerCase() === "canon") {
     console.log(products.items[i].product.title + " is a Canon product.");
   }
@@ -41,14 +33,22 @@ for (var i = 0; i < products.items.length; i++) {
 
 //print all items that have an author name of "eBay" and are brand "Canon"
 for (var i = 0; i < products.items.length; i++) {
-  brand = products.items[i].product.brand;
-  author = products.items[i].product.author.name;
+  var brand = products.items[i].product.brand;
+  var author = products.items[i].product.author.name;
   if (brand.toLowerCase() === "canon" && author.toLowerCase().includes("ebay") === true) {
     console.log(products.items[i].product.title + " is a Canon product from eBay.");
   }
 }
 
 //print all products with their brand, price and an image link
+var printItem = function (i) {
+  console.log("Number: " + (i + 1));
+  console.log("Title: " + products.items[i].product.title);
+  console.log("Brand: " + products.items[i].product.brand);
+  console.log("Price: " + products.items[i].product.inventories[0].price);
+  console.log("Image Link: " + products.items[i].product.images[0].link);
+}
+
 for (var i = 0; i < products.items.length; i++) {
   printItem (i);
 }
@@ -57,13 +57,15 @@ for (var i = 0; i < products.items.length; i++) {
 //prompt the user to show only new or used products
 //prompt the user to search by brand or condition
 //then prompt the user to put in their actual search condition
-//Print out some special error text if there were no results
+//print out some special error text if there were no results
 
 var searchBool = confirm("Do you want to search for a product by brand or condition?");
-var brandOrCondition;
-var productsFound = 0;
 
 if (searchBool === true) {
+
+  var brandOrCondition;
+  var productsFound = 0;
+
   do {
     brandOrCondition = prompt("Ok. Search by brand or condition? (no to cancel)").toLowerCase();
   } while (brandOrCondition !== "brand" && brandOrCondition !== "condition" && brandOrCondition !== "no");
@@ -75,7 +77,7 @@ if (searchBool === true) {
     console.log("Ok. Looking for '" + productBrand + "' products.");
 
     for (var i = 0; i < products.items.length; i++) {
-      if (products.items[i].product.brand === productBrand) {
+      if (products.items[i].product.brand.toLowerCase() === productBrand.toLowerCase()) {
         printItem (i);
         productsFound ++;
       }
