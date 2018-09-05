@@ -33,7 +33,16 @@ for(var i=0; i < products.items.length; i++){
 
 //Q3
   //Find condition with > 1 image link
-  if(products.items[i].product.images.length > 1){
+  /*if(products.items[i].product.images.length > 1){
+
+    //Print product title of identified match
+    console.log(products.items[i].product.title);
+  }
+}*/
+
+//Q4
+  //Find condition for all "Canon".lowercase item
+  if(products.items[i].product.brand.toLowerCase() === "canon"){
 
     //Print product title of identified match
     console.log(products.items[i].product.title);
