@@ -1,6 +1,6 @@
 //Go through the items and find all results that have kind of shopping#product. Print the count of these results.
 
-for (var i=0;i<products.items.length; i++){
+/* for (var i=0;i<products.items.length; i++){
 
   var shopProd = products.items[i];
 if (shopProd.kind == "shopping#product"){
@@ -9,6 +9,7 @@ if (shopProd.kind == "shopping#product"){
 }
 
 console.log(count);
+
 
 
 //Where else is this count information stored in the search results?
@@ -64,7 +65,26 @@ for (var i=0; i<products.items.length; i++){
   console.log(`Price: $${allProds.product.inventories[0].price}`);
   console.log(`Link: ${allProds.product.images[0].link}`);
   console.log(" ");
+} */
+
+
+
+//Futher: Prompt the user for the product brand and print only those products.
+var stringPrompt = prompt(`Please enter one of the following product brands. \n
+  Canon, Sony, Nikon, Panasonic, Samsung, Fuji, Pentax`);
+var userBrand = stringPrompt.charAt(0).toUpperCase()+stringPrompt.slice(1);
+
+
+for (var i=0; i<products.items.length; i++){
+  var allProds = products.items[i];
+  if (allProds.product.brand === userBrand){
+  console.log( `Products: ${allProds.product.title}`);
 }
+}
+
+
+
+
 
 
 
