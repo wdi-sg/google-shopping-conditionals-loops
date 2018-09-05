@@ -1,43 +1,10 @@
 console.log(products)
-// Part 1
-// var count = 0
-// for (var i = 0; i < products.items.length; i++) {
-//   if (products.items[i].kind === "shopping#product") {
-//     console.log(products.items[i].kind);
-//     count++;
-//   }
-// };
-// console.log(count)
 
-//Part 2
-// for (var i = 0; i < products.items.length; i++) {
-//   if (products.items[i].product.inventories[0].availability === "backorder") {
-//     console.log(products.items[i].product.title);
-//   }
-// };
+var productBrand = prompt("What Brand are you looking for?")
+var itemCondition = prompt("Do you want to see new or used items?")
 
-// Part 3
-// for (var i = 0; i < products.items.length; i++) {
-// 	if (products.items[i].product.images.length > 1) {
-// 		console.log(products.items[i].product.title)
-// 	}
-// };
-
-//Part 4
-// for (var i = 0; i < products.items.length; i++) {
-//   if (products.items[i].product.brand === "Canon") {
-//     console.log(products.items[i].product.title)
-//   };
-// };
-
-//Part 5
-// for (var i = 0; i < products.items.length; i++) {
-// 	if ((products.items[i].product.author.name === "eBay") && (products.items[i].product.brand === "Canon")) {
-// 		console.log(products.items[i].product.title)
-// 	}
-// };
-
-//Part 6
-for (var i = 0; i < products.items.length; i++) {
-	console.log(products.items[i].product.brand, products.items[i].product.inventories[0].price, products.items[i].product.images[0].link);
+for (i=0; i < products.items.length; i++) {
+	if ((productBrand === products.items[i].product.brand) && (itemCondition === products.items[i].product.condition)) {
+		console.log(products.items[i].product.title)
+	};
 };
