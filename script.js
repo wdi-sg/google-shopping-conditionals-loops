@@ -51,3 +51,14 @@ for(var i = 0; i < products.items.length; i++) {
     console.log(products.items[i].product.title);
   }
 }
+
+//Print all items that have an author name of "eBay" and are brand "Canon".
+
+console.log('Canon Products from eBay:');
+
+for(var i = 0; i < products.items.length; i++) {
+  //console.log(products.items[i].product.brand);
+  if (products.items[i].product.brand === 'Canon' && products.items[i].product.author.name.indexOf('eBay') !== -1) {
+    console.log(products.items[i].product.title);
+  }
+}
