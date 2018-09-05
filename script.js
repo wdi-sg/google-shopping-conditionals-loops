@@ -42,10 +42,17 @@ for (var i=0; i < products.items.length; i++){
 
 //Print all items that have an author name of "eBay" and are brand "Canon".
 
-for (var i=0; i < products.items.length; i++){
+/*for (var i=0; i < products.items.length; i++){
     if (products.items[i].product.author.name ==="eBay" && products.items[i].product.brand === "Canon"){
         console.log(products.items[i]);
     }
-}
+}*/
 
 //Print all the products with their brand, price, and an image link
+
+for (var i=0; i < products.items.length; i++){
+        console.log(i+1)
+        console.log("Brand: " + products.items[i].product.brand);
+        console.log("Price: " + products.items[i].product.inventories[0].price);
+        console.log("Image: " + products.items[i].product.images[0].link);
+    }
