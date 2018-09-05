@@ -2,6 +2,11 @@
 //Initialise var count
 var count = 0;
 
+//Prompt user for product brand
+productBrandInput = prompt("Search for brands");
+
+//Prompt user for condition of product
+productConditionInput = prompt("Do you want to filter the search?", "New, Used or Both")
 //Look through all array(items) in products
 for(var i=0; i < products.items.length; i++){
 
@@ -60,8 +65,17 @@ for(var i=0; i < products.items.length; i++){
 
 //Q6
   //Print all the products with following details
-  console.log(products.items[i].product.title); //name
+  /*console.log(products.items[i].product.title); //name
   console.log(products.items[i].product.brand); //brand
   console.log("USD " +parseInt(products.items[i].product.inventories[0].price)); //price
   console.log(products.items[i].product.link); //image link
+}*/
+
+//Further
+  //Compare input with array(list) of product brand values
+  if(productBrandInput.toLowerCase() === products.items[i].product.brand.toLowerCase()){
+
+    //Print only those products
+    console.log(products.items[i].product.title);
+  }
 }
