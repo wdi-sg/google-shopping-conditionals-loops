@@ -4,6 +4,7 @@
 //products.items.currentItemCount
 
 var count = 0;
+var condition;
 
 for (var i = 0; i < products.items.length; i++) {
   if (products.items[i].kind === 'shopping#product') {
@@ -23,9 +24,9 @@ console.log(products.items[0]['product']['inventories'].length);
 console.log('Products on back order:');
 
 for(var i = 0; i < products.items.length; i++) {
-  for (var j = 0; j < products.items[i]['product']['inventories'].length; j++) {
-    if (products.items[i]['product']['inventories'][j]['availability'] === 'backorder') {
-      console.log(products.items[i]['product']['title'])
+  for (var j = 0; j < products.items[i].product.inventories.length; j++) {
+    if (products.items[i].product.inventories[j].availability === 'backorder') {
+      console.log(products.items[i].product.title)
     }
   }
 }
@@ -35,7 +36,9 @@ for(var i = 0; i < products.items.length; i++) {
 console.log('Products with more than 1 image:')
 
 for(var i = 0; i < products.items.length; i++) {
-  if (products.items[i]['product']['images'].length > 1) {
-    console.log(products.items[i]['product']['title']);
+  if (products.items[i].product.images.length > 1) {
+    console.log(products.items[i].product.title);
   }
 }
+
+//Print all "Canon" products in the items (careful with case sensitivity).
