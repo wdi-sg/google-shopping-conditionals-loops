@@ -1137,3 +1137,5 @@ var products = {
   }
  ]
 }
+
+console.log("test");

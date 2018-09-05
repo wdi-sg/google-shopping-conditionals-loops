@@ -1,4 +1,4 @@
-console.log("Halo World!");
+//console.log("Halo World!");
 console.log(products);
 
 // Go through the items and find all results that have kind of shopping#product.
@@ -6,9 +6,9 @@ console.log(products);
 // stored in the search results?
 // var myKind = "shopping#products";
 
-for( var i = 0; i<products.items.length; i++){
-  console.log( products.items[i].kind);
-}
+// for( var i = 0; i<products.items.length; i++){
+//   console.log( products.items[i].kind);
+// }
 //   var item = products.items[i]
 //   console.log( item.kind);
 //   console.log( item );
@@ -18,12 +18,21 @@ for( var i = 0; i<products.items.length; i++){
 //   }
 // }
 
-// for (var i = 0; i<products.items.length;i++) {
+/*start Print the title of all items with a backorder availability in inventories
+for (var i = 0; i<products.items.length;i++) {
 
-// if (products.items[i].product.inventories[0].availability === "backorder"){
-//     console.log(products.items[i].product.title);
-//   }
-// }
+if (products.items[i].product.inventories[0].availability === "backorder"){
+    console.log(products.items[i].product.title);
+  }
+}
+*/
 // for (var i = 0; i <= products.length; i++){
 // console.log(products.items[i].kind.product);
 // }
+
+//start for Print the title of all items with more than one image link.
+for (var i = 0; i <products.items.length; i++){
+  if (products.items[i].product.images.length > 1){
+    console.log(products.items[i].product.title)
+  }
+}
