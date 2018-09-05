@@ -1,5 +1,7 @@
 
 
+
+/*
 //Deliverables
 
 Use the product search result in your file to find the following results.
@@ -98,9 +100,105 @@ for (i = 0; i < products["items"].length; i++){
 
 
     }
+}
+}
+
+
+
+//### Further: Prompt the user for the product brand and print only those products.
+
+
+var userSearch = prompt("What brand of products are you looking for?")
+
+for (i = 0; i < products["items"].length; i++){
+    var item = products.items[i]
+    var prod = item.product
+    var bran = prod.brand
+  if (userSearch === bran){
+    console.log(prod.title);
+  }
+}
+
+
+//Prompt the user if they want to see only new or used items.
+
+var userSearch = prompt("Are you looking of new or used")
+
+for (i = 0; i < products["items"].length; i++){
+    var item = products.items[i]
+    var prod = item.product
+    var cond = prod.condition
+  if (userSearch === cond){
+    console.log(prod.title);
+  }
+
+  else
+    console.log("no products")
+  };
+
+
+
+
+### Further:
+Prompt the user what kind of search they want to do- search by brand or search by condition.
+
+Then prompt the user to put in ther actual search value- (new/used for condition *or* brand name for brand)
+
+Print out some special error text (e.g. "Sorry, nothing found") if there were no results.
+
+*/
+
+var brandOrCondition = prompt("Do you want to search by brand or condition?")
+var userSearch;
+
+function searchByCondition(){
+for (i = 0; i < products["items"].length; i++){
+    var item = products.items[i]
+    var prod = item.product
+    var cond = prod.condition
+  if (userSearch === cond){
+    console.log(prod.title);
+  }
+
+  else
+    console.log("no products")
+  };
 
 }
+function searchByBrand(){
+for (i = 0; i < products["items"].length; i++){
+    var item = products.items[i]
+    var prod = item.product
+    var bran = prod.brand
+  if (userSearch === bran){
+    console.log(prod.title);
+  }
 }
+}
+
+if (brandOrCondition === "brand"){
+  userSearch = prompt("Please enter name of brand");
+  searchByBrand(userSearch)
+}
+
+else if (brandOrCondition === "condition"){
+  userSearch = prompt("Please enter new or old");
+  searchByBrand(userSearch);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
