@@ -78,6 +78,9 @@ if (searchMethod === "brand" || searchMethod === "Search by brand") {
         if (products.items[i].product.brand.toLowerCase() === selectedMethod) {
             console.log("Brand: " + products.items[i].product.brand + ". Price: $" + products.items[i].product.inventories[0].price + ". View image here: " + products.items[i].product.images[0].link);
         }
+        else{
+          console.log("Sorry, no items to show.");
+        }
     }
 } else if (searchMethod === "condition" || searchMethod === "Search by condition") {
     selectedMethod = prompt("Search for new or used items?")
