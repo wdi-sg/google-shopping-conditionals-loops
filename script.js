@@ -100,28 +100,49 @@
 
 
 // Part 7 // Prompt the user for the product brand and print only those products.
+// Part 7 //
+// Part 7 // var brandInput = prompt("What is the product brand?").toLowerCase();
+// Part 7 //
+// Part 7 // for ( var i = 0; i < products.items.length; i++ ) {
+// Part 7 //
+// Part 7 //   var item = products.items[i];
+// Part 7 //
+// Part 7 //   if ( item.product.brand.toLowerCase() === brandInput) {
+// Part 7 //
+// Part 7 //       console.log(item.product);
+// Part 7 //   }
+// Part 7 // }
 
-var brandInput = prompt("What is the product brand?").toLowerCase();
-
-for ( var i = 0; i < products.items.length; i++ ) {
-
-  var item = products.items[i];
-
-  if ( item.product.brand.toLowerCase() === brandInput) {
-
-      console.log(item.product);
-  }
-}
-
-// Part 8 // Prompt the user if they want to see only new or used items.
-
-// Part 9 // Prompt the user what kind of search they want to do- search by brand or search by condition.
-
+// Part 8  // Prompt the user if they want to see only new or used items.
+// Part 9  // Prompt the user what kind of search they want to do- search by brand or search by condition.
 // Part 10 // Then prompt the user to put in ther actual search value- (new/used for condition or brand name for brand)
-
 // Part 11 // Print out some special error text (e.g. "Sorry, nothing found") if there were no results.
 
+var searchType = prompt("Do you wish to search by Brand or by Condition?").toLowerCase();
 
+if ( searchType.includes("brand") ) {
+
+  var brandInput = prompt("What is the product brand?").toLowerCase();
+
+  for ( var i = 0; i < products.items.length; i++ ) {
+    var item = products.items[i];
+
+    if ( item.product.brand.toLowerCase() === brandInput) {
+        console.log(item.product);
+    }
+  }
+} else if ( searchType.includes("condition") ) {
+
+  var conditionInput = prompt("New or Used?").toLowerCase();
+
+  for ( var i = 0; i < products.items.length; i++ ) {
+    var item = products.items[i];
+
+    if ( item.product.condition.toLowerCase() === conditionInput) {
+        console.log(item.product);
+    }
+  }
+}
 
 
 
