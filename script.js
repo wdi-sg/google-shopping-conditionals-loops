@@ -4,7 +4,6 @@
 //products.items.currentItemCount
 
 var count = 0;
-var condition;
 
 for (var i = 0; i < products.items.length; i++) {
   if (products.items[i].kind === 'shopping#product') {
@@ -16,12 +15,6 @@ console.log('');
 console.log(`1. There are ${count} shopping#product items.`);
 
 //Print the title of all items with a backorder availability in inventories.
-
-/*
-console.log(products.items[0]['product']['inventories'][0]['availability']);
-console.log(products.items[0]['product']['title']);
-console.log(products.items[0]['product']['inventories'].length);
-*/
 
 console.log('');
 console.log('2. Products on back order:');
@@ -80,4 +73,20 @@ for(i in products.items) {
     var price = products.items[i].product.inventories[j].price;
   }
   console.log(`Brand: ${brand}, Price: ${price}, Image: ${imageLink}`);
+}
+
+//Prompt the user for the product brand and print only those products.
+//Prompt the user if they want to see only new or used items.
+
+console.log('')
+console.log('User search results:')
+
+var userBrand = prompt('What brand are you looking for?').toLowerCase();
+var userCondition = prompt('Do you prefer new or used?', 'new or used').toLowerCase();
+
+for(i in products.items){
+  var brand = products.items[i].product.brand;
+  var condition = products.items[i].product.condition;
+  if ((brand.toLowerCase().indexOf(userBrand) !== -1) && (condition.toLowerCase().indexOf(userCondition) !== -1))
+    console.log(products.items[i].product.title);
 }
