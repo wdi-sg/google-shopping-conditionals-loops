@@ -1,9 +1,6 @@
 //console.log("Halo World!");
 console.log(products);
 
-// Go through the items and find all results that have kind of shopping#product.
-// Print the count of these results. Where else is this count information
-// stored in the search results?
 /*start of part 1
   var myKind = "shopping#products";
   for( var i = 0; i<products.items.length; i++){
@@ -27,10 +24,27 @@ for (var i = 0; i <products.items.length; i++){
 }
 end of part 3*/
 
-//start of part 4
+/*start of part 4
 for (var i = 0; i < products.items.length; i++){
   if (products.items[i].product.brand ==="Canon"){
     console.log(products.items[i].product.title)
     }
   }
-  // end of part 4
+  end of part 4 */
+
+//start of part 5
+for (var i = 0; i < products.items.length; i ++){
+
+  if((products.items[i].product.author.name === "eBay") && (products.items[i].product.brand === "Canon")){
+    console.log(products.items[i]);
+    //var item = products.items[i];
+    //console.log( item );
+  }
+
+}
+//end of part 5
+
+
+
+
+
