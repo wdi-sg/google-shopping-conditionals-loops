@@ -24,8 +24,15 @@ console.log(products)
 // };
 
 //Part 4
+// for (var i = 0; i < products.items.length; i++) {
+//   if (products.items[i].product.brand === "Canon") {
+//     console.log(products.items[i].product.title)
+//   };
+// };
+
+//Part 5
 for (var i = 0; i < products.items.length; i++) {
-  if (products.items[i].product.brand === "Canon") {
-    console.log(products.items[i].product.title)
-  };
+	if ((products.items[i].product.author.name === "eBay") && (products.items[i].product.brand === "Canon")) {
+		console.log(products.items[i].product.title)
+	}
 };
