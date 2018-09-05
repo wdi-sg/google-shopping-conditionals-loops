@@ -1,10 +1,20 @@
 console.log(products)
 
-var productBrand = prompt("What Brand are you looking for?")
-var itemCondition = prompt("Do you want to see new or used items?")
+var typeOfSearch = prompt("Do you want to search by brand or condition?")
 
-for (i=0; i < products.items.length; i++) {
-	if ((productBrand === products.items[i].product.brand) && (itemCondition === products.items[i].product.condition)) {
-		console.log(products.items[i].product.title)
-	};
+if (typeOfSearch === "brand") {
+  var brandSearch = prompt("Which brand do you want to search for?")
+  for (i = 0; i < products.items.length; i++) {
+    if (brandSearch === products.items[i].product.brand) {
+      console.log(products.items[i].product.title)
+    };
+  };
+} 
+else if (typeOfSearch === "condition") {
+  var newOrOld = prompt("Do you want a new or old item?")
+  for (i = 0; i < products.items.length; i++) {
+    if (newOrOld === products.items[i].product.condition) {
+      console.log(products.items[i].product.title)
+    }
+  };
 };
