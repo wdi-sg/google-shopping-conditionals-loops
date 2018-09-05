@@ -18,21 +18,21 @@ console.log(products);
 //   }
 // }
 
-/*start Print the title of all items with a backorder availability in inventories
+//start Print the title of all items with a backorder availability in inventories
 for (var i = 0; i<products.items.length;i++) {
 
 if (products.items[i].product.inventories[0].availability === "backorder"){
     console.log(products.items[i].product.title);
   }
 }
-*/
+
 // for (var i = 0; i <= products.length; i++){
 // console.log(products.items[i].kind.product);
 // }
 
-//start for Print the title of all items with more than one image link.
+/*start for Print the title of all items with more than one image link.
 for (var i = 0; i <products.items.length; i++){
   if (products.items[i].product.images.length > 1){
     console.log(products.items[i].product.title)
   }
-}
+}*/
