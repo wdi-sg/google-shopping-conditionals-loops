@@ -17,8 +17,15 @@ console.log(products)
 // };
 
 // Part 3
+// for (var i = 0; i < products.items.length; i++) {
+// 	if (products.items[i].product.images.length > 1) {
+// 		console.log(products.items[i].product.title)
+// 	}
+// };
+
+//Part 4
 for (var i = 0; i < products.items.length; i++) {
-	if (products.items[i].product.images.length > 1) {
-		console.log(products.items[i].product.title)
-	}
+  if (products.items[i].product.brand === "Canon") {
+    console.log(products.items[i].product.title)
+  };
 };
