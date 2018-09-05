@@ -33,7 +33,7 @@ for(var i = 0; i < products.items.length; i++) {
 
 //Print the title of all items with more than one image link.
 
-console.log('Products with more than 1 image:')
+console.log('Products with more than 1 image:');
 
 for(var i = 0; i < products.items.length; i++) {
   if (products.items[i].product.images.length > 1) {
@@ -42,3 +42,12 @@ for(var i = 0; i < products.items.length; i++) {
 }
 
 //Print all "Canon" products in the items (careful with case sensitivity).
+
+console.log('Products of Canon Brand:');
+
+for(var i = 0; i < products.items.length; i++) {
+  //console.log(products.items[i].product.brand);
+  if (products.items[i].product.brand === 'Canon') {
+    console.log(products.items[i].product.title);
+  }
+}
