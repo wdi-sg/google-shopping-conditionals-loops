@@ -24,7 +24,16 @@ for(var i=0; i < products.items.length; i++){
 
 //Q2
   //Find condition of inventories == 'backorder'
-  if(products.items[i].product.inventories[0].availability === "backorder"){
+  /*if(products.items[i].product.inventories[0].availability === "backorder"){
+
+    //Print product title of identified match
+    console.log(products.items[i].product.title);
+  }
+}*/
+
+//Q3
+  //Find condition with > 1 image link
+  if(products.items[i].product.images.length > 1){
 
     //Print product title of identified match
     console.log(products.items[i].product.title);
