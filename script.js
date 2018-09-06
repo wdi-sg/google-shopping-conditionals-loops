@@ -42,18 +42,20 @@ for (var i = 0; i < products.items.length; i++){
  //part 5: Print all items that have an author name of "eBay" and are brand "Canon".
  for (var i = 0; i < products.items.length; i++){
   var short_item = products.items[i];
-  if (short_item.product.brand === "Canon" && short_item.product.author.name === "eBay"){
+  if (short_item.product.brand === "Canon" && short_item.product.author.name.includes("eBay")) {
     console.log(short_item);
 
   }
  }
 
 
- //part 6: Print all the products with their brand, price, and an image link
+ //part 6: Print all the products with their brand, price, and an image link (To print all image links, uncomment the for loop)
  for (var i = 0; i < products.items.length; i++){
   var short_item = products.items[i];
   for (var j = 0; j< short_item.product.inventories.length; j++){
+    //for (var k=0; k <short_item.product.images.length; k++){
       console.log("Brand name: " + short_item.product.brand + " , price: " + short_item.product.inventories[j].price + " , image links: " + short_item.product.images[0].link);
+    //}
   }
 }
 
@@ -84,6 +86,7 @@ for (var i = 0; i < products.items.length;i++){
 
 //Prompt the user what kind of search they want to do- search by brand or search by condition.
 //Then prompt the user to put in ther actual search value- (new/used for condition or brand name for brand)
+
 var inp3 = prompt("What do you want to search by? (Brand or Condition)?: ");
 if (inp3 === "Brand"){
   var inp4 = prompt("What is the search value? (please input brand name): ");
@@ -92,17 +95,25 @@ if (inp3 === "Brand"){
   if (short_item.product.brand === inp4){
     console.log(short_item);
   }
+  else{
+    console.log("Sorry, nothing found");
+  }
   }
 }
-
-if (inp3 === "Condition"){
+else if(inp3 === "Condition"){
   var inp5 = prompt("What is the search value? (please input new or used): ");
   for (var i = 0; i < products.items.length;i++){
   var short_item = products.items[i];
   if(short_item.product.condition === inp5){
     console.log(short_item);
   }
+  else{
+    console.log("Sorry, nothing found");
   }
+  }
+}
+else{
+  console.log("Sorry, nothing found");
 }
 
 
