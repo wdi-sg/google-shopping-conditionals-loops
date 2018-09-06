@@ -71,7 +71,7 @@ for (var i=0; i<products.items.length; i++){
 
 //Futher: Prompt the user for the product brand and print only those products.
 
-var stringPrompt = prompt(`Please enter one of the following product brands. \n
+/*var stringPrompt = prompt(`Please enter one of the following product brands. \n
   Canon, Sony, Nikon, Panasonic, Samsung, Fuji, Pentax`);
 var userBrand = stringPrompt.charAt(0).toUpperCase()+stringPrompt.slice(1);
 
@@ -81,8 +81,24 @@ for (var i=0; i<products.items.length; i++){
   if (allProds.product.brand === userBrand){
   console.log( `Products: ${allProds.product.title}`);
 }
-}
+}*/
 
+//Prompt the user if they want to see only new or used items.
+var stringPromptTwo = prompt (`Please key "New" or "Used" to view available items.`)
+var userCondition = stringPromptTwo.toLowerCase();
+
+for (var i=0; i<products.items.length; i++){
+  var allProds = products.items[i];
+  if (userCondition === "new" && allProds.product.condition === userCondition){
+  console.log(`New products available: ${allProds.product.title}`);
+} else if (userCondition === "used" || allProds.product.condition === "used"){
+  console.log(`Used products available: ${allProds.product.title}`);
+} else if (userCondition !== null || allProds.product.condition === null){
+  alert(`No product available at this time.`); break;
+} else if (userCondition !== "new" || userCondition !== "used") {
+  alert(`Error! Please key in "New" or "Used.`);
+}
+}
 
 
 
