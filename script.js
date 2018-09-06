@@ -60,6 +60,8 @@ for(var i =0 ; i<items.length ; i++){
   }
 }
 
+*/
+
 //part 6
 
 var items = products.items
@@ -67,10 +69,12 @@ var items = products.items
 for(var i=0 ; i<items.length ; i++){
     console.log(items[i].product.brand)
     console.log(items[i].product.inventories[0].price)
-    console.log(items[i].product.images[0].link)}
+    console.log(items[i].product.images[0].link)
+    }
 
-//////////////FURTHER/////////////////////
+//////////////FURTHER//////////////////////
 
+/*
 //Further 1
 var brand= prompt("please enter brand")
 var condition = prompt("please enter condition")
@@ -85,7 +89,6 @@ for(var i=0 ; i<items.length ; i++){
   }
 }
 
-*/
 
 //Further 2
 
@@ -114,28 +117,4 @@ for(var i=0 ; i<items.length ; i++){
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
