@@ -119,6 +119,7 @@
 // Part 11 // Print out some special error text (e.g. "Sorry, nothing found") if there were no results.
 
 var searchType = prompt("Do you wish to search by Brand or by Condition?").toLowerCase();
+var count = 0
 
 if ( searchType.includes("brand") ) {
 
@@ -128,7 +129,9 @@ if ( searchType.includes("brand") ) {
     var item = products.items[i];
 
     if ( item.product.brand.toLowerCase() === brandInput) {
-        console.log(item.product);
+        console.log (item.product);
+
+        count++;
     }
   }
 } else if ( searchType.includes("condition") ) {
@@ -139,11 +142,16 @@ if ( searchType.includes("brand") ) {
     var item = products.items[i];
 
     if ( item.product.condition.toLowerCase() === conditionInput) {
-        console.log(item.product);
+        console.log (item.product);
+
+        count++;
     }
   }
 }
 
+if (count === 0) {
+  console.log ("Sorry, no results for that brand/condition.")
+}
 
 
 
