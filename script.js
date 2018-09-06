@@ -101,17 +101,21 @@ else {
 
 
 for(var i=0 ; i<items.length ; i++){
-  if(inputCondition === items[i].product.condition){
+  if(items[i].product.condition.includes(inputCondition)){
     console.log(items[i].product.title)
   }
-  else if(inputBrand === items[i].product.brand){
+  else if(items[i].product.brand.includes(inputBrand)){
     console.log(items[i].product.title)
   }
-  else if (input !== items[i].product.condition && input !== items[i].product.brand){
+  else{console.log("nothing")
+  if(input !== items[i].product.condition && input !== items[i].product.brand){
     console.log("nothing") //further 3
-    break
+    }
   }
 }
+
+
+
 
 
 
