@@ -88,7 +88,7 @@ var products = {
     "description": "Massive 20.2MP Exmor 1” CMOS Image Sensor/ Capture JPEG Files And RAW Files/ P/A/S/M Modes For Video And Stills/ Low-Light ISO 6400 Sensitivity/ Bright F1.8 Carl Zeiss Vario-Sonnar T Lens With 3.6x Zoom/ Full HD 1080/60p/ Black Finish",
     "link": "http://www.abt.com/product/62925/Sony-DSCRX100B.html?utm_source=scfroogle&utm_medium=sc&utm_campaign=froogle",
     "brand": "Sony",
-    "condition": "new",
+    "condition": "used",
     "gtin": "00027242856110",
     "gtins": [
      "00027242856110"
