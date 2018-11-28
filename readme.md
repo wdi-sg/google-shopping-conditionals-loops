@@ -40,7 +40,7 @@ Note that you may want to comment out your solutions as you solve them, to avoid
 
 ### Further:
 Prompt the user for the product brand and print only those products.
-
+images
 Prompt the user if they want to see only new or used items.
 
 ### Further:

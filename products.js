@@ -1,4 +1,4 @@
-var products = {
+let products = {
  "kind": "shopping#products",
  "etag": "\"kSuBj73OPkN9HtEsYnzpddO-iYI/Xtf9O47gfjxyM3i-AgbqXTkcxTM\"",
  "id": "tag:google.com,2010:shopping/products",
@@ -1136,4 +1136,5 @@ var products = {
    }
   }
  ]
-}
+};
+
