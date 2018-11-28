@@ -292,7 +292,7 @@ var products = {
    "product": {
     "googleId": "18400283058629038583",
     "author": {
-     "name": "eBay - Bigvalueinc",
+     "name": "eBay",
      "accountId": "8026394"
     },
     "creationTime": "2013-05-28T16:27:33.000Z",
@@ -465,7 +465,7 @@ var products = {
    "product": {
     "googleId": "18092316852173916770",
     "author": {
-     "name": "eBay - howardtechnology",
+     "name": "eBay",
      "accountId": "7867474"
     },
     "creationTime": "2013-06-12T21:42:08.000Z",
@@ -587,7 +587,7 @@ var products = {
    "product": {
     "googleId": "17826874961104763871",
     "author": {
-     "name": "eBay - beststopdeals",
+     "name": "eBay",
      "accountId": "6504554"
     },
     "creationTime": "2013-06-07T01:20:32.000Z",
@@ -874,7 +874,7 @@ var products = {
    "product": {
     "googleId": "17225849483606303723",
     "author": {
-     "name": "eBay - onecall",
+     "name": "eBay",
      "accountId": "6347724"
     },
     "creationTime": "2013-05-13T00:21:17.000Z",
@@ -1049,7 +1049,7 @@ var products = {
    "product": {
     "googleId": "16261575049293546089",
     "author": {
-     "name": "eBay - thecamerabox",
+     "name": "eBay",
      "accountId": "8508634"
     },
     "creationTime": "2013-05-31T20:19:12.000Z",
