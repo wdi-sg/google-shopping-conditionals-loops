@@ -12,6 +12,14 @@ Make sure the `products.js` file is in that directory.
 
 In the html file, include the script `products.js`. Remember that the order of the script tags matters.
 
+### Hint
+It's very important to understand the structure of the `products` object.
+Use the console to look at this object. When you type the `product` variable into the console, it becomes interactive.
+
+Paste in the code that can access certain parts of the object and see what values, if any, you get out.
+
+Example `cats[1].allergies[6]` - if you don't see anything back up- try the thing above: `cats[1].allergies`
+
 ## Deliverables
 
 Use the product search result in your file to find the following results.
