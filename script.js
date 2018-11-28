@@ -84,7 +84,10 @@
 //   console.log("Brand: " + itemBrand + "Price: " + itemPrice+ "Image: " + itemImage);
 //   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fd44358952a5ce56695d444444e3eb6b0e2e804e
 //##Further Part 1
 
 // Prompt the user for the product brand and print only those products.
