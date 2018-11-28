@@ -177,31 +177,3 @@ if(userFilter === "brand"){
 } else {
   alert("Error!");
 }
-
-// var typeOfSearch = prompt("Do you want to search by brand or condition?");
-// var results = 0;
-//  if (typeOfSearch === "brand") {
-//   var brandSearch = prompt("Which brand do you want to search for?")
-//   for (i = 0; i < products.items.length; i++) {
-//     if (brandSearch === products.items[i].product.brand) {
-//       console.log(products.items[i].product.title)
-//       console.log(products.items[i].product.title);
-//       results++
-//     };
-//   };
-// }
-// else if (typeOfSearch === "condition") {
-// } else if (typeOfSearch === "condition") {
-//   var newOrOld = prompt("Do you want a new or old item?")
-//   for (i = 0; i < products.items.length; i++) {
-//     if (newOrOld === products.items[i].product.condition) {
-//       console.log(products.items[i].product.title)
-//     }
-//   };
-// } else {
-//   results++;
-//   console.log("Did you check your input? Please enter it correctly.");
-// }
-// if (results === 0) {
-//   console.log("No items were found which matched the brand that you entered. You may wanna try 'Sony', 'Nikon', 'Canon'. We don't sell Off-White.")
-// };
