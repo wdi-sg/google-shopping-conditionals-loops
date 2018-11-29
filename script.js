@@ -87,19 +87,19 @@ for (i = 0; i < productItems.length; ++i) {
 console.log("****************************************************************************************************");
 
 //prompts user to input brand and store as string with first letter uppercase only
+var availableBrands = ["Canon", "Sony", "Nikon", "Lytro", "Panasonic", "Samsung", "Fuji", "Olympus", "Pentax"];
 var userInputBrand = prompt("What product brand are you looking for? ");
 if ( userInputBrand === "" || userInputBrand === null) {
   console.log("No brand given");
 } else {
 var userInput = userInputBrand.substring(0, 1).toUpperCase(userInputBrand.charAt(0))+ userInputBrand.substring(1).toLowerCase(userInputBrand.substring(1));
 //to check userInput through all available brand
-  if (availableBrands.indexOf(userInput) < false) {
+if (availableBrands.indexOf(userInput) < false) {
     console.log("The brand is not available");
   }; // if
 } // if else
 
 //prompts user to input condition of product
-var availableBrands = ["Canon", "Sony", "Nikon", "Lytro", "Panasonic", "Samsung", "Fuji", "Olympus", "Pentax"];
 var userCondition = prompt("Would you like to buy a new or used product? ");
 if ( userCondition === "" || userCondition === null) {
   console.log("No condition given");
