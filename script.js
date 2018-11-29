@@ -43,7 +43,7 @@ for (var i = 0;i<items.length;i++) {
 // Print all items that have an author name of "eBay" and are brand "Canon".
 for (var i = 0;i<items.length;i++) {
   item = items[i];
-  if (item.product.brand.toLowerCase() === 'canon' && item.product.author.name.toLowerCase() === "ebay") {
+  if (item.product.brand.toLowerCase() === 'canon' && item.product.author.name.toLowerCase().includes("ebay")) {
     console.log(item);
   }
 }
