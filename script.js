@@ -88,17 +88,24 @@ console.log("*******************************************************************
 
 //prompts user to input brand and store as string with first letter uppercase only
 var userInputBrand = prompt("What product brand are you looking for? ");
+if ( userInputBrand === "" || userInputBrand === null) {
+  console.log("No brand given");
+} else {
 var userInput = userInputBrand.substring(0, 1).toUpperCase(userInputBrand.charAt(0))+ userInputBrand.substring(1).toLowerCase(userInputBrand.substring(1));
+//to check userInput through all available brand
+  if (availableBrands.indexOf(userInput) < false) {
+    console.log("The brand is not available");
+  }; // if
+} // if else
 
 //prompts user to input condition of product
-var userCondition = prompt("Would you like to buy a new or used product? ");
-var condition = userCondition.substring(0, 1).toUpperCase(userCondition.charAt(0))+ userCondition.substring(1).toLowerCase(userCondition.substring(1));
 var availableBrands = ["Canon", "Sony", "Nikon", "Lytro", "Panasonic", "Samsung", "Fuji", "Olympus", "Pentax"];
-
-//to check userInput through all available brand
-if (availableBrands.indexOf(userInput) < false) {
-  console.log("The brand is not available");
-}; // if
+var userCondition = prompt("Would you like to buy a new or used product? ");
+if ( userCondition === "" || userCondition === null) {
+  console.log("No condition given");
+} else {
+  var condition = userCondition.substring(0, 1).toUpperCase(userCondition.charAt(0))+ userCondition.substring(1).toLowerCase(userCondition.substring(1));
+} // if else
 
 if (condition !== "New" || condition !== "Used") {
   console.log("Invalid condition input");
