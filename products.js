@@ -1137,3 +1137,6 @@ var products = {
   }
  ]
 }
+
+
+products["items"][13]["product"]["author"]["name"].includes("ebay");
