@@ -30,3 +30,9 @@ for (var i = 0; i < products["items"].length; i++) {
     console.log(products["items"][i].product.title);
   }
 }
+console.log("All products with their brand, price and first image link listed below");
+for (var i = 0; i < products["items"].length; i++) {
+  console.log(products["items"][i].product.brand);
+  console.log(products["items"][i].product.inventories[0].price);
+  console.log(products["items"][i].product.images[0]);
+}
