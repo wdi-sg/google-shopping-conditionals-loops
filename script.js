@@ -12,7 +12,7 @@ for (i = 0; i < products.items.length; i++) {
 }
 console.log(shoppingProduct);
 
-//Print the title of all items with a backorder availability in inventories.
+//Q2 Print the title of all items with a backorder availability in inventories.
 // inventories key is an array, must be back ordered
 
 for (i = 0; i < products.items.length; i++) {
@@ -21,7 +21,7 @@ for (i = 0; i < products.items.length; i++) {
   }
 }
 
-//Print the title of all items with more than one image link.
+//Q3 Print the title of all items with more than one image link.
 
 for (i = 0; i < products.items.length; i++) {
   if (products.items[i].product.images.length > 1 ) {
@@ -30,10 +30,17 @@ for (i = 0; i < products.items.length; i++) {
 } // use .length as images is an array.
 
 
+//Q4 Print all "Canon" products in the items (careful with case sensitivity).
+
+for (i = 0; i < products.items.length; i++) {
+  if (products.items[i].product.brand === "Canon") {
+    console.log(products.items[i].product.title);
+  }
+}
+//console.log(products.items[3].product.brand)
 
 
-
-
+console.log(products.items[0].product.author.name)
 
 //console.log(products.items[1].product.inventories[0].availability)
 
