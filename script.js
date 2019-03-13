@@ -11,4 +11,9 @@ for (var i = 0; i < products["items"].length; i++) {
   if( products["items"][i].product.inventories[0].availability === "backorder") {
     console.log(products["items"][i].product.title);
   }
+}console.log("products with more than 1 image link below");
+for (var i = 0; i < products["items"].length; i++) {
+  if(products["items"][i].product.images.length > 1){
+    console.log(products["items"][i].product.title);
+  }
 }
