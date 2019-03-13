@@ -2,6 +2,7 @@
 // Q1 Go through the items and find all results that have kind of shopping#product. Print the count of these results. Where else is this count information stored in the search results?
 
 console.log(products) // View this in console developer to view data tree
+// HINT!!! if conditionals keep prompting an error, console log it to see if prints out your desired result.
 var shoppingProduct = 0;
 
 // products.items is an array of 25 indexes, which is why you need products.items[i]
@@ -20,6 +21,8 @@ for (i = 0; i < products.items.length; i++) {
     console.log(products.items[i].product.title);
   }
 }
+
+//console.log(products.items[1].product.inventories[1].availability)
 
 //Q3 Print the title of all items with more than one image link.
 
@@ -48,15 +51,17 @@ for (i = 0; i < products.items.length; i++)  {
   }
 };
 
+//var ebaySplit = (products.items[10].product.author.name).split(' ');
+//take note that there are items that have ebay and a suffix
 
-var ebaySplit = (products.items[10].product.author.name).split(' '); //take note that there are items that have ebay and a suffix
-console.log(ebaySplit[0])
-//console.log(products.items[1].product.inventories[1].availability)
+//Q6 Print all the products with their brand, price, and an image link
+for (i = 0; i < products.items.length; i++ ) {
+  let randomImage = Math.floor((Math.random() * products.items[i].product.images.length)) // randomised the images
+  console.log(products.items[i].product.title);
+  console.log(products.items[i].product.brand);
+  console.log(products.items[i].product.inventories[0].price)
+  console.log(products.items[i].product.images[randomImage]); //var randomImage is a number, so it should be accessed as an index
+}
 
 
-
-
-//console.log(products.items[1].kind)
-//console.log(products.items[0].kind)
-//console.log(products.items[0].product.images.length);
 
