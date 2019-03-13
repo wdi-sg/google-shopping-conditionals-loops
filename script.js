@@ -39,9 +39,10 @@ for (var i = 0; i < products["items"].length; i++) {
 
 //Further
 var uiBrand = prompt("Enter Product Brand to search for:");
+var uiCondition = prompt("Enter 'new' to see new items only, enter 'used' to see used items");
 console.log("Search results for " + uiBrand + ":");
 for (var i = 0; i < products["items"].length; i++) {
-  if(products["items"][i].product.brand === uiBrand ){
+  if( (products["items"][i].product.brand === uiBrand) && (products["items"][i].product.condition === uiCondition) ){
     console.log(products["items"][i].product.title);
   }
 }
