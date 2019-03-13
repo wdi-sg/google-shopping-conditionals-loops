@@ -44,12 +44,13 @@ for (i = 0; i < products.items.length; i++) {
 
 //Q5 Print all items that have an author name of "eBay" and are brand "Canon".
 
-for (i = 0; i < products.items.length; i++)  {
-  var ebaySplit = (products.items[i].product.author.name).split(' ');
-  if ((products.items[i].product.brand === "Canon") && (ebaySplit[i] === "eBay")) {
-    console.log(products.items[i].product.title);
+for (i=0; i<products.items.length; i++) {
+  var authorName = products.items[i].product.author.name
+  var itemBrand = products.items[i].product.brand
+  if (authorName.includes ("eBay") && itemBrand === "Canon") {
+  console.log(products.items[i].product.title);
   }
-};
+}
 
 //var ebaySplit = (products.items[10].product.author.name).split(' ');
 //take note that there are items that have ebay and a suffix
@@ -64,15 +65,29 @@ for (i = 0; i < products.items.length; i++ ) {
 }
 
 //Q7 Prompt the user for the product brand and print only those products.
+// Prompt the user if they want to see only new or used items.
 
 var userInput = prompt('What brand of products are you looking for?');
-var userQuery = userInput.charAt(0).toUpperCase() + userInput.slice(1) //Capitalize due to case sensitive brands.
+var userInputCondition = prompt("Are you looking for new or used condition?")
+var userChoice = prompt("Search by brand or condition?");
 
-for (i = 0; i < products.items.length; i++) {
-  if(products.items[i].product.brand === userQuery) { //simple conditional, userQuery is the brand.
-    console.log(products.items[i].product.title);
-  }
+var userQuery = userInput.charAt(0).toUpperCase() + userInput.slice(1) //Capitalize due to case sensitive brands.
+var userConditionQuery = userInputCondition.toLowerCase();
+
+if (userChoice === 'brand' || userChoice === "Brand" || userChoice === "BRAND") {
+  alert(userQuery);
+}  else if (userChoice === 'condition' || userChoice === 'Condition' || userChoice === "CONDITION"){
+  alert(userConditionQuery);
+}  else {
+  alert("Sorry Nothing Found!")
 }
 
-alert(userQuery);
+for (i = 0; i < products.items.length; i++) {
+  if(products.items[i].product.brand === userQuery && products.items[i].product.condition === userConditionQuery ) { //simple conditional, userQuery is the brand.
+    console.log(products.items[i].product.title);
+  } else {
+    console.log("nothing found!")
+    break; //break is required otherwise it will loop multiple times.
+  }
+}
 
