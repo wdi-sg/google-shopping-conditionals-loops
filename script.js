@@ -16,5 +16,25 @@ for (var i = 0; i < items.length; i++) {
 }
 console.log('There are ' + results + ' products with the kind "shopping#product".');
 
+// Print the title of all items with a backorder availability in inventories.
+
+var itemsWithBackorderAvail = 0;
+
+// e.g. inventories = products["items"][i]["products"]["inventories"]["availability"];
+
+for (var i = 0; i < items.length; i++) {
+  var inventories = products["items"][i]["product"]["inventories"][0]["availability"];
+  if (inventories === "backorder") {
+    itemsWithBackorderAvail += 1;
+  } else {
+    console.log("boop!");
+  }
+}
+
+console.log('There are ' + itemsWithBackorderAvail + ' products with a backorder availability in inventories.')
+
+
+
+
 
 
