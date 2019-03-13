@@ -39,10 +39,19 @@ for (i = 0; i < products.items.length; i++) {
 }
 //console.log(products.items[3].product.brand)
 
+//Q5 Print all items that have an author name of "eBay" and are brand "Canon".
 
-console.log(products.items[0].product.author.name)
+for (i = 0; i < products.items.length; i++)  {
+  var ebaySplit = (products.items[i].product.author.name).split(' ');
+  if ((products.items[i].product.brand === "Canon") && (ebaySplit[i] === "eBay")) {
+    console.log(products.items[i].product.title);
+  }
+};
 
-//console.log(products.items[1].product.inventories[0].availability)
+
+var ebaySplit = (products.items[10].product.author.name).split(' '); //take note that there are items that have ebay and a suffix
+console.log(ebaySplit[0])
+//console.log(products.items[1].product.inventories[1].availability)
 
 
 
