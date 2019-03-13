@@ -85,9 +85,7 @@ if (userChoice === 'brand' || userChoice === "Brand" || userChoice === "BRAND") 
 for (i = 0; i < products.items.length; i++) {
   if(products.items[i].product.brand === userQuery && products.items[i].product.condition === userConditionQuery ) { //simple conditional, userQuery is the brand.
     console.log(products.items[i].product.title);
-  } else {
-    console.log("nothing found!")
-    break; //break is required otherwise it will loop multiple times.
   }
-}
+  }
 
+console.log(products.items[0].product.condition)
