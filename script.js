@@ -36,3 +36,12 @@ for (var i = 0; i < products["items"].length; i++) {
   console.log(products["items"][i].product.inventories[0].price);
   console.log(products["items"][i].product.images[0]);
 }
+
+//Further
+var uiBrand = prompt("Enter Product Brand to search for:");
+console.log("Search results for " + uiBrand + ":");
+for (var i = 0; i < products["items"].length; i++) {
+  if(products["items"][i].product.brand === uiBrand ){
+    console.log(products["items"][i].product.title);
+  }
+}
