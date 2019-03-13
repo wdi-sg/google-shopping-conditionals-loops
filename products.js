@@ -10,6 +10,7 @@ var products = {
  "currentItemCount": 25,
  "requestId": "0CPCXpoKU8bcCFeohRAodikIAAA",
  "items": [
+// 1st item is below
   {
    "kind": "shopping#product",
    "id": "tag:google.com,2010:shopping/products/7774881/11180453840663864493",
@@ -70,6 +71,7 @@ var products = {
     ]
    }
   },
+//2nd item is below
   {
    "kind": "shopping#product",
    "id": "tag:google.com,2010:shopping/products/3532205/16661504721410582447",
@@ -113,6 +115,7 @@ var products = {
     ]
    }
   },
+//3rd item is below:
   {
    "kind": "shopping#product",
    "id": "tag:google.com,2010:shopping/products/1057813/6067895891153887292",
@@ -156,6 +159,7 @@ var products = {
     ]
    }
   },
+//4th
   {
    "kind": "shopping#product",
    "id": "tag:google.com,2010:shopping/products/3359942/11738086986303167840",
@@ -199,6 +203,7 @@ var products = {
     ]
    }
   },
+//5th:
   {
    "kind": "shopping#product",
    "id": "tag:google.com,2010:shopping/products/1032628/6306163093076466800",
@@ -242,6 +247,7 @@ var products = {
     ]
    }
   },
+//6th:
   {
    "kind": "shopping#product",
    "id": "tag:google.com,2010:shopping/products/10046/10747647294570910080",
@@ -285,6 +291,7 @@ var products = {
     ]
    }
   },
+//7th
   {
    "kind": "shopping#product",
    "id": "tag:google.com,2010:shopping/products/8026394/18400283058629038583",
@@ -328,6 +335,7 @@ var products = {
     ]
    }
   },
+//8th:
   {
    "kind": "shopping#product",
    "id": "tag:google.com,2010:shopping/products/8688882/18366881915581583933",
@@ -1136,4 +1144,6 @@ var products = {
    }
   }
  ]
+ // the above square brackets closes the "items" property in the 'products' object
 }
+//This curly brackets closes the products object.
