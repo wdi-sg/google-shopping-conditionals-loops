@@ -48,3 +48,16 @@ for (var i = 0; i < products["items"].length; i++) {
   }
 }
 
+//Question 5
+console.log("Question 5");
+
+for (var i = 0; i < products["items"].length; i++) {
+  var item = products["items"][i];
+  var make = item.product.brand;
+  var auth = item.product.author.name;
+  if ((make === ("Canon" || "canon")) && (auth.includes("eBay"))) {
+    console.log(item.product.title);
+  }
+}
+
+
