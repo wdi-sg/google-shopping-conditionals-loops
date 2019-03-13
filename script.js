@@ -63,5 +63,16 @@ for (i = 0; i < products.items.length; i++ ) {
   console.log(products.items[i].product.images[randomImage]); //var randomImage is a number, so it should be accessed as an index
 }
 
+//Q7 Prompt the user for the product brand and print only those products.
 
+var userInput = prompt('What brand of products are you looking for?');
+var userQuery = userInput.charAt(0).toUpperCase() + userInput.slice(1) //Capitalize due to case sensitive brands.
+
+for (i = 0; i < products.items.length; i++) {
+  if(products.items[i].product.brand === userQuery) { //simple conditional, userQuery is the brand.
+    console.log(products.items[i].product.title);
+  }
+}
+
+alert(userQuery);
 
