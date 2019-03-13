@@ -60,4 +60,14 @@ for (var i = 0; i < products["items"].length; i++) {
   }
 }
 
+//Question 6
+console.log("Question 6");
+
+for (var i = 0; i < products["items"].length; i++) {
+  var item = products["items"][i];
+  var make = item.product.brand;
+  var prc = item.product.inventories[0].price;
+  var img = item.product["images"][0];
+      console.log("Item: " + item.product.title + " , " + " Brand: " + make + " , " + "Price: $" + prc + " , " + "Image: " + img.link );
+  }
 
