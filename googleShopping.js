@@ -71,3 +71,18 @@ for (var i = 0; i < products["items"].length; i++) {
       console.log("Item: " + item.product.title + " , " + " Brand: " + make + " , " + "Price: $" + prc + " , " + "Image: " + img.link );
   }
 
+//Question 7
+console.log("Question 7");
+
+var userInput = prompt("What brand are you searching for?");
+   console.log(userInput);
+
+for (var i = 0; i < products["items"].length; i++) {
+  var item = products["items"][i];
+  var make = item.product.brand;
+  var prc = item.product.inventories[0].price;
+  var img = item.product["images"][0];
+  if(userInput.toLowerCase() == make.toLowerCase()) {
+      console.log("Item: " + item.product.title + " , " + " Brand: " + make + " , " + "Price: $" + prc + " , " + "Image: " + img.link );
+  }
+}
