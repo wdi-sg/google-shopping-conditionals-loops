@@ -56,6 +56,26 @@ for (i in products.items){
   console.log(products.items[i].product.images[0].link);
 }
 console.log("End of part 6");
+
+//Further part 1.1: we try to build in capitalise first letter of user input word.
+var productBrand = prompt("What is the product brand you are looking for?");
+console.log(productBrand);
+
+productBrand = productBrand.charAt(0).toUpperCase() + productBrand.slice(1);
+console.log(productBrand);
+
+for (i in products.items){
+  if(products.items[i].product.brand == productBrand){
+   console.log(products.items[i].product.title);
+ }
+};
+console.log("End of further part 1.1");
+
+//Further part 1.2: we ask user if they want to see new or used items
+
+
+console.log("End of further part 1.2");
+
 /*
 console.log("fffff")
 console.log(products["items"][0]);
