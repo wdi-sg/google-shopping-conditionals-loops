@@ -86,3 +86,23 @@ for (var i = 0; i < products["items"].length; i++) {
       console.log("Item: " + item.product.title + " , " + " Brand: " + make + " , " + "Price: $" + prc + " , " + "Image: " + img.link );
   }
 }
+
+//Question 8
+console.log("Question 8");
+
+var userInput = prompt("Would you prefer a New or Old item?");
+
+   console.log("List of all " + userInput.toUpperCase() + " items available: ");
+
+
+for (var i = 0; i < products["items"].length; i++) {
+  var item = products["items"][i];
+  var cond = item.product.condition;
+  var make = item.product.brand;
+  var prc = item.product.inventories[0].price;
+  var img = item.product["images"][0];
+
+  if(userInput.toLowerCase() == cond.toLowerCase()) {
+      console.log("Item: " + item.product.title + " , " + " Brand: " + make + " , " + "Price: $" + prc + " , " + "Image: " + img.link );
+  }
+}
