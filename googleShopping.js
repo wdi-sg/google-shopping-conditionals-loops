@@ -20,7 +20,7 @@ console.log("Question 2");
 
 for (var i = 0; i < products["items"].length; i++) {
   var item = products["items"][i];
-  var inventory = item.product
+  var inventory = item.product;
   if (inventory.inventories[0].availability === "backorder") {
   console.log(inventory.title);
   }
@@ -29,4 +29,10 @@ for (var i = 0; i < products["items"].length; i++) {
 //Question 3
 console.log("Question 3");
 
-
+for (var i = 0; i < products["items"].length; i++) {
+  var item = products["items"][i];
+  var imgs = item.product["images"];
+  if (imgs.length>0) {
+    console.log(item.product.title);
+  }
+}
