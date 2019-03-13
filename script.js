@@ -39,6 +39,7 @@ for (var i = 0; i < products["items"].length; i++) {
 
 //Further
 var uiChoiceBrandCondition = prompt("Search for brand or condition or both");
+var searchCounter = 0;
 if (uiChoiceBrandCondition === "both") {
   var uiBrand = prompt("Enter Product Brand to search for:");
   var uiCondition = prompt("Enter 'new' to see new items only, enter 'used' to see used items");
@@ -46,6 +47,7 @@ if (uiChoiceBrandCondition === "both") {
   for (var i = 0; i < products["items"].length; i++) {
     if( (products["items"][i].product.brand === uiBrand) && (products["items"][i].product.condition === uiCondition) ){
       console.log(products["items"][i].product.title);
+      searchCounter++;
     }
   }
 } else if (uiChoiceBrandCondition === "condition") {
@@ -54,6 +56,7 @@ if (uiChoiceBrandCondition === "both") {
   for (var i = 0; i < products["items"].length; i++) {
     if( products["items"][i].product.condition === uiCondition ){
       console.log(products["items"][i].product.title);
+      searchCounter++;
     }
   }
 } else if (uiChoiceBrandCondition === "brand") {
@@ -62,6 +65,10 @@ if (uiChoiceBrandCondition === "both") {
   for (var i = 0; i < products["items"].length; i++) {
     if( products["items"][i].product.brand === uiBrand ){
       console.log(products["items"][i].product.title);
+      searchCounter++;
     }
   }
+}
+if ( searchCounter === 0 ) {
+  alert("Sorry, nothing found!");
 }
