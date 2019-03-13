@@ -85,10 +85,10 @@ for (var i = 0; i < prodItem.length; i++) {
   }
 }
 */
-// prodItem[i].product.inventories[0].price
-//prodItem[i].product.images[0]
+
 
 // 6. Print all the products with their **brand**, **price**, and an **image link**
+/*
 for (var i = 0; i < prodItem.length; i++) {
   var brand = prodItem[i].product.brand;
   var title = products.items[i].product.title;
@@ -101,3 +101,32 @@ for (var i = 0; i < prodItem.length; i++) {
     console.log(i+ ". " + " "+ "Brand: " + brand  + ", " + "Price: " + "$" + price + ", " + "Image Link: " + imgLink);
 
 }
+*/
+//7. Prompt the user for the product brand and print only those products.
+// Prompt the user if they want to see only new or used items.
+var userInputun = prompt("Search for brands (Sony, Canon, Nikon)").toLowerCase();
+var userInput = userInputun.charAt(0).toUpperCase() + userInputun.slice(1, userInputun.length);
+// console.log(userInput);
+var newOrOld = prompt("Would you want to view a new or old item?").toLowerCase();
+
+function searchBrand(thingBrand, thingNeworOld) {
+for (var i = 0; i < prodItem.length; i++) {
+  var brand = prodItem[i].product.brand;
+  var title = products.items[i].product.title;
+  var author = prodItem[i].product.author.name;
+  var hasName = author.search("eBay");
+  var imgLink = prodItem[i].product.images[0].link;
+  var condition = prodItem[i].product.condition;
+  // console.log(hasName)
+
+  if(brand == thingBrand && condition == thingNeworOld) {
+    // console.log(counter++)
+    console.log(i+ ". " + " "+ "Title: " + title + ", " + imgLink);
+  }
+}
+}
+
+searchBrand(userInput,newOrOld);
+
+
+
