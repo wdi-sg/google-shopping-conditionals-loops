@@ -2,7 +2,7 @@ console.log("hello");
 
 console.log(products);
 
-//Question 1
+// //Question 1
 console.log("Question 1");
 var count = 0
 
@@ -15,7 +15,7 @@ for (var i = 0; i < products["items"].length; i++) {
   console.log("Count base on loop: " + count);
   console.log("Count retrived from search result: " + products["currentItemCount"]);
 
-//Question 2
+// //Question 2
 console.log("Question 2");
 
 for (var i = 0; i < products["items"].length; i++) {
@@ -26,7 +26,7 @@ for (var i = 0; i < products["items"].length; i++) {
   }
 }
 
-//Question 3
+// //Question 3
 console.log("Question 3");
 
 for (var i = 0; i < products["items"].length; i++) {
@@ -36,3 +36,15 @@ for (var i = 0; i < products["items"].length; i++) {
     console.log(item.product.title);
   }
 }
+
+//Question 4
+console.log("Question 4");
+
+for (var i = 0; i < products["items"].length; i++) {
+  var item = products["items"][i];
+  var make = item.product.brand;
+  if (make === ("Canon" || "canon")) {
+    console.log(item.product.title);
+  }
+}
+
