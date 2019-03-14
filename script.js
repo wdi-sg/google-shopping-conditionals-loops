@@ -1,4 +1,4 @@
-console.log("Assignment2");
+// console.log("Assignment2");
 
 // ------------------------------------------------------------------------------------------------------------------------
 
@@ -222,73 +222,73 @@ console.log("Assignment2");
 
 // Then prompt the user to put in their actual search value- (new/used for condition or brand name for brand)
 
-var count = 0;
-var results = [];
+// var count = 0;
+// var results = [];
 
-var itemsOfProducts = products["items"];
+// var itemsOfProducts = products["items"];
 
-var userInputSearchByBrandOrCondition = prompt("Do you want to search by brand or condition?");
-if(userInputSearchByBrandOrCondition.toLowerCase() == "brand") {
+// var userInputSearchByBrandOrCondition = prompt("Do you want to search by brand or condition?");
+// if(userInputSearchByBrandOrCondition.toLowerCase() == "brand") {
 
-  var userBrandInput = prompt("What brand of product do you want to search for?")
+//   var userBrandInput = prompt("What brand of product do you want to search for?")
 
-  var count = 0;
-  var results = [];
+//   var count = 0;
+//   var results = [];
 
-  var itemsOfProducts = products["items"];
+//   var itemsOfProducts = products["items"];
 
-  for(var x=0; x< itemsOfProducts.length; x++) {
+//   for(var x=0; x< itemsOfProducts.length; x++) {
 
-      var itemBrand = itemsOfProducts[x]["product"]["brand"];
-      // console.log(itemBrand);
+//       var itemBrand = itemsOfProducts[x]["product"]["brand"];
+//       // console.log(itemBrand);
 
-    if(itemBrand.toLowerCase() == userBrandInput.toLowerCase()) {
-      results.push(itemsOfProducts[x]["product"]["title"]);
-      count++;
-    }
-}
+//     if(itemBrand.toLowerCase() == userBrandInput.toLowerCase()) {
+//       results.push(itemsOfProducts[x]["product"]["title"]);
+//       count++;
+//     }
+// }
 
-console.log(count);
-console.log(results);
+// console.log(count);
+// console.log(results);
 
-} else if(userInputSearchByBrandOrCondition.toLowerCase() == "condition") {
+// } else if(userInputSearchByBrandOrCondition.toLowerCase() == "condition") {
 
-var userNewOrUsedInput = prompt("Do you want to search for new or used products?")
+// var userNewOrUsedInput = prompt("Do you want to search for new or used products?")
 
-if(userNewOrUsedInput.toLowerCase() == "new") {
-for(var x=0; x< itemsOfProducts.length; x++) {
+// if(userNewOrUsedInput.toLowerCase() == "new") {
+// for(var x=0; x< itemsOfProducts.length; x++) {
 
-  var itemCondition = itemsOfProducts[x]["product"]["condition"];
+//   var itemCondition = itemsOfProducts[x]["product"]["condition"];
 
-  if(itemCondition.toLowerCase() == "new") {
-    results.push(itemsOfProducts[x]["product"]["title"]);
-    count++;
-  }
-}
+//   if(itemCondition.toLowerCase() == "new") {
+//     results.push(itemsOfProducts[x]["product"]["title"]);
+//     count++;
+//   }
+// }
 
-console.log(count);
-console.log(results);
+// console.log(count);
+// console.log(results);
 
-} else if(userNewOrUsedInput.toLowerCase() == "used") {
-for(var y=0; y< itemsOfProducts.length; y++) {
+// } else if(userNewOrUsedInput.toLowerCase() == "used") {
+// for(var y=0; y< itemsOfProducts.length; y++) {
 
-  var itemCondition = itemsOfProducts[y]["product"]["condition"];
+//   var itemCondition = itemsOfProducts[y]["product"]["condition"];
 
-  if(itemCondition.toLowerCase() == "used") {
-    results.push(itemsOfProducts[y]["product"]["title"]);
-    count++;
-  }
-}
+//   if(itemCondition.toLowerCase() == "used") {
+//     results.push(itemsOfProducts[y]["product"]["title"]);
+//     count++;
+//   }
+// }
 
-console.log(count);
-console.log(results);
+// console.log(count);
+// console.log(results);
 
-} else {
-  console.log("Sorry, nothing found")
-}
+// } else {
+//   console.log("Sorry, nothing found")
+// }
 
 
-} else {
-  console.log("Sorry, nothing found");
-}
+// } else {
+//   console.log("Sorry, nothing found");
+// }
 
