@@ -86,7 +86,7 @@ for (var i = 0; i < prodItem.length; i++) {
 }
 */
 
-
+/****************************/
 // 6. Print all the products with their **brand**, **price**, and an **image link**
 /*
 for (var i = 0; i < prodItem.length; i++) {
@@ -102,8 +102,10 @@ for (var i = 0; i < prodItem.length; i++) {
 
 }
 */
+/****************************/
 //7. Prompt the user for the product brand and print only those products.
 // Prompt the user if they want to see only new or used items.
+/*
 var userInputun = prompt("Search for brands (Sony, Canon, Nikon)").toLowerCase();
 var userInput = userInputun.charAt(0).toUpperCase() + userInputun.slice(1, userInputun.length);
 // console.log(userInput);
@@ -127,6 +129,39 @@ for (var i = 0; i < prodItem.length; i++) {
 }
 
 searchBrand(userInput,newOrOld);
+*/
+/***************************/
+// 8.Prompt the user what kind of search they want to do- search by brand or search by condition.
+// Then prompt the user to put in ther actual search value- (new/used for condition *or* brand name for brand)
+var i = 0;
+var userinputOne = prompt("Search our list by brand? Or by condition?").toLowerCase();
 
+if (userinputOne === "brand") {
+  alert("Type in a brand! (Sony, Nikon, Canon....)")
+  i++
+} else if (userinputOne === "condition") {
+  alert("New or refurbished?")
+  i++
+} else {
+  prompt("Please reenter brand or condition.")
+}
+/*
+function searchBrandorCondition(thingBrand, thingCondition) {
+for (var i = 0; i < prodItem.length; i++) {
+  var brand = prodItem[i].product.brand;
+  var title = products.items[i].product.title;
+  var author = prodItem[i].product.author.name;
+  var hasName = author.search("eBay");
+  var imgLink = prodItem[i].product.images[0].link;
+  var condition = prodItem[i].product.condition;
+  // console.log(hasName)
 
+  if(brand == thingBrand && condition == thingNeworOld) {
+    // console.log(counter++)
+    console.log(i+ ". " + " "+ "Title: " + title + ", " + imgLink);
+  }
+}
+}
+searchBrandorCondition(userInput,)
+*/
 
